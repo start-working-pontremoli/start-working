@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">Start Working Pontremoli</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Comunita di smart working in Lunigiana, Toscana. Coworking gratuito, fibra veloce, natura e comunita.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Start Working Pontremoli">
+  <meta property="og:description" content="Lavora da un posto che puoi chiamare casa. Smart working in Lunigiana, Toscana.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Vai al contenuto</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header" role="banner">
+    <div class="container header__inner">
+      <a class="header__logo" href="#" aria-label="Start Working - Torna in cima">
+        <span class="header__logo-text">Start Working</span>
+      </a>
+
+      <nav class="header__nav" id="main-nav" aria-label="Menu principale">
+        <ul class="header__nav-list">
+          <li><a href="#chi-siamo" class="header__nav-link" data-i18n="nav.about">Chi siamo</a></li>
+          <li><a href="#lunigiana" class="header__nav-link">Lunigiana</a></li>
+          <li><a href="#servizi" class="header__nav-link" data-i18n="nav.services">Servizi</a></li>
+          <li><a href="#community" class="header__nav-link">Community</a></li>
+          <li><a href="#faq" class="header__nav-link">FAQ</a></li>
+          <li><a href="#contatti" class="header__nav-link" data-i18n="nav.contact">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-toggle" role="group" aria-label="Lingua">
+          <button class="lang-toggle__btn active" data-lang="it" aria-pressed="true">🇮🇹 IT</button>
+          <button class="lang-toggle__btn" data-lang="en" aria-pressed="false">🇬🇧 EN</button>
+        </div>
+        <button class="header__hamburger" id="hamburger-btn" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="header__hamburger-line"></span>
+          <span class="header__hamburger-line"></span>
+          <span class="header__hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu di navigazione" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <button class="mobile-menu__close" id="menu-close" aria-label="Chiudi menu">&times;</button>
+      <nav class="mobile-menu__nav" aria-label="Menu mobile">
+        <a href="#chi-siamo" class="mobile-menu__link" data-i18n="nav.about">Chi siamo</a>
+        <a href="#lunigiana" class="mobile-menu__link">Lunigiana</a>
+        <a href="#servizi" class="mobile-menu__link" data-i18n="nav.services">Servizi</a>
+        <a href="#community" class="mobile-menu__link">Community</a>
+        <a href="#faq" class="mobile-menu__link">FAQ</a>
+        <a href="#contatti" class="mobile-menu__link" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <div class="lang-toggle mobile-menu__lang" role="group" aria-label="Lingua">
+        <button class="lang-toggle__btn active" data-lang="it" aria-pressed="true">🇮🇹 IT</button>
+        <button class="lang-toggle__btn" data-lang="en" aria-pressed="false">🇬🇧 EN</button>
+      </div>
+      <div class="mobile-menu__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" role="img" aria-label="Paesaggio della Lunigiana"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title" data-i18n="hero.title">Lavora da un posto che puoi chiamare casa.</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Una comunita di lavoratori remoti nel cuore della Toscana selvaggia.</p>
+        <div class="hero__buttons">
+          <a href="#chi-siamo" class="btn btn--primary" data-i18n="hero.cta_discover">Scopri di piu</a>
+          <a href="#contatti" class="btn btn--outline" data-i18n="hero.cta_contact">Contattaci</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- CHI SIAMO -->
+    <section class="section" id="chi-siamo">
+      <div class="container">
+        <h2 class="section__title" data-i18n="about.title">Chi Siamo</h2>
+        <div class="about">
+          <p class="about__text" data-i18n="about.text">Start Working Pontremoli e un progetto nato per ripopolare l'Appennino attirando professionisti da tutto il mondo. Non solo un coworking: una comunita vera, in un luogo che puoi chiamare casa.</p>
+          <div class="about__image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=450&fit=crop" alt="Comunita di coworking" data-i18n-attr="alt:about.image_alt" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LUNIGIANA -->
+    <section class="section section--white" id="lunigiana">
+      <div class="container">
+        <div class="territory">
+          <div class="territory__image">
+            <img src="https://images.unsplash.com/photo-1534237886190-ced735ca4b73?w=700&h=500&fit=crop" alt="Paesaggio della Lunigiana" data-i18n-attr="alt:territory.image_alt" loading="lazy">
+          </div>
+          <div class="territory__text">
+            <h2 class="territory__title">Lunigiana</h2>
+            <p class="territory__description" data-i18n="territory.text">Non e la Toscana che immagini. E selvaggia, irriverente, fatta di fiumi, foreste, borghi medievali e sentieri di montagna. Un luogo dove il tempo scorre diversamente e la natura e a portata di mano.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section class="section" id="servizi">
+      <div class="container">
+        <h2 class="section__title" data-i18n="services.title">Cosa Puoi Trovare</h2>
+        <div class="services">
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="20" cy="12" r="6"/><path d="M10 34c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M28 10l4 4M32 10l-4 4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Welcoming</h3>
+            <p class="service-card__text" data-i18n="services.welcoming">Visite esplorative e immersione culturale. Ti accogliamo e ti facciamo scoprire il borgo.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="14" cy="14" r="6"/><circle cx="26" cy="14" r="6"/><path d="M6 34c0-4.418 3.582-8 8-8h12c4.418 0 8 3.582 8 8"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Community</h3>
+            <p class="service-card__text" data-i18n="services.community">Connessioni sociali gia pronte. Attivita, eventi e una rete di persone che ti aspettano.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="10" width="28" height="20" rx="2"/><path d="M12 20h16M12 25h8"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Coworking</h3>
+            <p class="service-card__text" data-i18n="services.coworking">Fibra veloce in una sala del '400 messa a disposizione gratuitamente dal Comune.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 30V16l12-8 12 8v14a2 2 0 01-2 2H10a2 2 0 01-2-2z"/><path d="M16 32V22h8v10"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.local_title">Servizi</h3>
+            <p class="service-card__text" data-i18n="services.local">Sanita, trasporti, sport, negozi: tutto a portata di piedi nel centro storico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY / TESTIMONIALS -->
+    <section class="section section--white" id="community">
+      <div class="container">
+        <h2 class="section__title" data-i18n="testimonials.title">La Nostra Community</h2>
+        <p class="section__subtitle" data-i18n="testimonials.subtitle">Le voci di chi ha scelto di vivere e lavorare qui.</p>
+        <div class="testimonials">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote" data-i18n="testimonials.q1">Ho trovato qui quello che in citta non esisteva: un equilibrio vero tra lavoro e vita.</p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true">MC</div>
+              <div>
+                <cite class="testimonial__name">Marco C.</cite>
+                <span class="testimonial__role" data-i18n="testimonials.r1">Designer, ex Milano</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote" data-i18n="testimonials.q2">La qualita della vita e incomparabile. Ogni giorno mi sveglio circondato dalla natura e dalla comunita.</p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true">SB</div>
+              <div>
+                <cite class="testimonial__name">Sara B.</cite>
+                <span class="testimonial__role" data-i18n="testimonials.r2">Sviluppatrice, ex Roma</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote" data-i18n="testimonials.q3">Lavorare circondati dalla natura cambia tutto. La creativita scorre diversamente qui.</p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true">LR</div>
+              <div>
+                <cite class="testimonial__name">Luca R.</cite>
+                <span class="testimonial__role" data-i18n="testimonials.r3">Copywriter, ex Torino</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote" data-i18n="testimonials.q4">Non pensavo che un borgo potesse offrire tutto questo. La fibra e veloce, il caffe e buono, le persone sono vere.</p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true">AK</div>
+              <div>
+                <cite class="testimonial__name">Anna K.</cite>
+                <span class="testimonial__role" data-i18n="testimonials.r4">Product Manager, ex Berlino</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote" data-i18n="testimonials.q5">I miei figli giocano in piazza mentre io lavoro. Questo non ha prezzo.</p>
+            <footer class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true">DM</div>
+              <div>
+                <cite class="testimonial__name">Diego M.</cite>
+                <span class="testimonial__role" data-i18n="testimonials.r5">Consulente IT, ex Londra</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESS -->
+    <section class="press" id="press">
+      <div class="container">
+        <h2 class="press__title" data-i18n="press.title">Parlano di Noi</h2>
+      </div>
+      <div class="press__track-wrapper">
+        <div class="press__track">
+          <span class="press__logo">Il Sole 24 Ore</span>
+          <span class="press__logo">Corriere della Sera</span>
+          <span class="press__logo">Wall Street Journal</span>
+          <span class="press__logo">ANSA</span>
+          <span class="press__logo">La Repubblica</span>
+          <span class="press__logo">Sky TG24</span>
+          <span class="press__logo">Wired Italia</span>
+          <span class="press__logo">Forbes</span>
+          <!-- Duplicated for seamless loop -->
+          <span class="press__logo" aria-hidden="true">Il Sole 24 Ore</span>
+          <span class="press__logo" aria-hidden="true">Corriere della Sera</span>
+          <span class="press__logo" aria-hidden="true">Wall Street Journal</span>
+          <span class="press__logo" aria-hidden="true">ANSA</span>
+          <span class="press__logo" aria-hidden="true">La Repubblica</span>
+          <span class="press__logo" aria-hidden="true">Sky TG24</span>
+          <span class="press__logo" aria-hidden="true">Wired Italia</span>
+          <span class="press__logo" aria-hidden="true">Forbes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section__title" data-i18n="faq.title">Domande Frequenti</h2>
+        <div class="faq">
+          <div class="faq__item">
+            <h3 class="faq__question" data-i18n="faq.q1">Come posso visitare Pontremoli?</h3>
+            <p class="faq__answer" data-i18n="faq.a1">Puoi prenotare una visita esplorativa scrivendoci a info@start-working.it. Ti accoglieremo e ti mostreremo il borgo, il coworking e la comunita.</p>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__question" data-i18n="faq.q2">Il coworking e gratuito?</h3>
+            <p class="faq__answer" data-i18n="faq.a2">Si, lo spazio coworking e messo a disposizione gratuitamente dal Comune di Pontremoli in una sala storica del XV secolo.</p>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__question" data-i18n="faq.q3">C'e connessione internet veloce?</h3>
+            <p class="faq__answer" data-i18n="faq.a3">Si, fibra ottica disponibile nel coworking e in gran parte del centro storico.</p>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__question" data-i18n="faq.q4">Posso venire con la famiglia?</h3>
+            <p class="faq__answer" data-i18n="faq.a4">Assolutamente si. Pontremoli offre scuole, pediatri, spazi verdi e una comunita accogliente per le famiglie.</p>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__question" data-i18n="faq.q5">Come si raggiunge Pontremoli?</h3>
+            <p class="faq__answer" data-i18n="faq.a5">Pontremoli e raggiungibile in treno (linea La Spezia-Parma), in auto (autostrada A15) o tramite gli aeroporti di Pisa e Parma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section class="section section--contact" id="contatti">
+      <div class="container">
+        <div class="contact">
+          <h2 class="contact__title" data-i18n="contact.title">Vuoi saperne di piu?</h2>
+          <p class="contact__subtitle" data-i18n="contact.subtitle">Raccontaci chi sei e cosa cerchi.</p>
+          <a href="mailto:info@start-working.it" class="btn btn--primary btn--large contact__cta">
+            <span data-i18n="contact.cta">Scrivici</span> &rarr; info@start-working.it
+          </a>
+          <address class="contact__address">
+            Via dei Mille 18, 54027 Pontremoli (MS)
+          </address>
+          <div class="contact__social">
+            <a href="#" class="contact__social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="contact__social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="contact__social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__logo">Start Working</div>
+      <p class="footer__org">Start Working Pontremoli APS</p>
+      <p class="footer__address">Via dei Mille 18, 54027 Pontremoli (MS)</p>
+      <div class="footer__links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Start Working Pontremoli APS</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Start Working Pontremoli — Work from a place you can call home",
+    "description": "Smart working community in Lunigiana, Tuscany. Free coworking, high-speed fiber, nature and real community."
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Work from a place you can call home.",
+    "subtitle": "A community of remote workers in the heart of wild Tuscany.",
+    "cta_discover": "Discover More",
+    "cta_contact": "Contact Us"
+  },
+  "about": {
+    "title": "About Us",
+    "text": "Start Working Pontremoli is a project born to repopulate the Apennines by attracting professionals from around the world. Not just a coworking space: a real community, in a place you can call home.",
+    "image_alt": "Coworking community in Pontremoli"
+  },
+  "territory": {
+    "text": "It's not the Tuscany you imagine. It's wild, irreverent, made of rivers, forests, medieval villages and mountain trails. A place where time flows differently and nature is at your doorstep.",
+    "image_alt": "Lunigiana landscape with medieval villages and mountains"
+  },
+  "services": {
+    "title": "What You Can Find",
+    "welcoming": "Exploratory visits and cultural immersion. We welcome you and show you the village.",
+    "community": "Ready-made social connections. Activities, events and a network of people waiting for you.",
+    "coworking": "High-speed fiber in a 15th-century hall provided free of charge by the municipality.",
+    "local_title": "Services",
+    "local": "Healthcare, transport, sports, shops: everything within walking distance in the historic center."
+  },
+  "testimonials": {
+    "title": "Our Community",
+    "subtitle": "Voices of those who chose to live and work here.",
+    "q1": "I found here what didn't exist in the city: a true balance between work and life.",
+    "r1": "Designer, formerly Milan",
+    "q2": "The quality of life is incomparable. Every day I wake up surrounded by nature and community.",
+    "r2": "Developer, formerly Rome",
+    "q3": "Working surrounded by nature changes everything. Creativity flows differently here.",
+    "r3": "Copywriter, formerly Turin",
+    "q4": "I didn't think a village could offer all this. The fiber is fast, the coffee is good, the people are real.",
+    "r4": "Product Manager, formerly Berlin",
+    "q5": "My kids play in the square while I work. That's priceless.",
+    "r5": "IT Consultant, formerly London"
+  },
+  "press": {
+    "title": "In the Press"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How can I visit Pontremoli?",
+    "a1": "You can book an exploratory visit by writing to info@start-working.it. We'll welcome you and show you the village, coworking space and community.",
+    "q2": "Is the coworking space free?",
+    "a2": "Yes, the coworking space is provided free of charge by the Municipality of Pontremoli in a historic 15th-century hall.",
+    "q3": "Is there fast internet?",
+    "a3": "Yes, fiber optic is available in the coworking space and throughout most of the historic center.",
+    "q4": "Can I come with my family?",
+    "a4": "Absolutely yes. Pontremoli offers schools, pediatricians, green spaces and a welcoming community for families.",
+    "q5": "How do I get to Pontremoli?",
+    "a5": "Pontremoli is reachable by train (La Spezia-Parma line), by car (A15 motorway) or via the airports of Pisa and Parma."
+  },
+  "contact": {
+    "title": "Want to know more?",
+    "subtitle": "Tell us who you are and what you're looking for.",
+    "cta": "Write us"
+  }
+}
