@@ -7,7 +7,7 @@
     "skip": "Vai al contenuto"
   },
   "nav": {
-    "story": "La storia",
+    "story": "Associazione",
     "community": "Comunità",
     "coworking": "Coworking",
     "contact": "Contatti"
@@ -15,15 +15,15 @@
   "hero": {
     "title": "Lavora da un posto che puoi chiamare casa.",
     "subtitle": "Una comunità diffusa di lavoratori remoti nel cuore della Toscana selvaggia.",
-    "cta_discover": "La nostra storia",
-    "cta_contact": "Fai il primo passo"
+    "cta_discover": "Scopri di più",
+    "cta_contact": "Unisciti a noi"
   },
   "story": {
     "ch1": {
       "title": "Come tutto è iniziato",
       "p1": "Ottobre 2020. Due pontremolesi si guardano intorno e vedono un paese che si svuota. Le case chiudono, i giovani partono, le botteghe abbassano le saracinesche. Ma vedono anche qualcosa che il resto del mondo sta cercando disperatamente: spazio, silenzio, bellezza, una vita a misura d'uomo.",
       "p2": "L'intuizione è semplice e rivoluzionaria: non serviva portare le persone al lavoro. Serviva portare il lavoro alle persone. Nasce così Start Working, un progetto per attrarre lavoratori remoti da tutta Italia e dal mondo intero in un borgo dell'Appennino toscano.",
-      "p3": "Da allora sono passati oltre quattro anni. Più di 150 persone si sono trasferite qui, da ogni regione italiana e da decine di paesi diversi. Nel 2023 Start Working è diventata un'associazione di promozione sociale (APS), riconosciuta e sostenuta dal Comune di Pontremoli. Non è un'azienda. Non è una startup. È una comunità che ha deciso di riscrivere le regole.",
+      "p3": "Da allora sono passati oltre quattro anni. Più di 150 persone si sono trasferite qui, da ogni regione italiana e da decine di paesi diversi. Il 29 agosto 2023 Start Working è diventata un'associazione di promozione sociale (APS), riconosciuta e sostenuta dal Comune di Pontremoli. Non è un'azienda. Non è una startup. È una comunità che ha deciso di riscrivere le regole.",
       "img_alt": "Panoramica di Pontremoli e la Lunigiana"
     },
     "ch2": {
@@ -37,11 +37,15 @@
     "ch3": {
       "title": "Una comunità che ti aspetta",
       "p1": "Più di 150 persone, dai 25 ai 60 anni, hanno scelto Pontremoli come casa. Non sono turisti. Sono professionisti, creativi, famiglie che hanno deciso di vivere diversamente. E la cosa straordinaria è che questa comunità ti aspetta davvero.",
-      "q_paola": "\"Sono qui da tre anni e la mia vita si è trasformata. Non tornerei indietro per niente al mondo.\"",
+      "q_paola": "\"3 anni fa portavo a Pontremoli le mie gatte e la mia vita. Il mio modo di vivere è cambiato per sempre.\"",
       "p2": "Le connessioni qui non sono superficiali. Non è networking: è condivisione vera. Si pranza insieme, si esplorano i sentieri il sabato, si organizzano cene e serate di conversazione. Ogni mese c'è lo Start Talking, un appuntamento dove vecchi e nuovi residenti si incontrano e scambiano storie.",
-      "q_pierpaolo": "\"Le connessioni qui sono autentiche. Non è il solito networking: è la vita vera.\"",
+      "q_pierpaolo": "\"Per me, Start Working non è stata solo un'opportunità, ma una vera rivelazione.\"",
       "p3": "Michelle viene dal Canada e ha trovato qui un ritmo che non sapeva di cercare. Alberto lavora dalla sua scrivania con vista sulle montagne da dodici anni. Andrea giura che i testaroli migliorano la qualità del suo codice. Ermes dice che qui non è smart working, è smile working. E Letizia? Non ha nemmeno bisogno della macchina.",
-      "q_ermes": "\"Qui non è smart working. È smile working.\"",
+      "q_michelle": "\"Si fonda su valori comuni ai miei: il ritmo a passo lento, la condivisione e la comunità.\"",
+      "q_alberto": "\"Scegliete un posto in base alla vista che si ha dalle sue finestre: se quello che vedete vi fa venire voglia di uscire di casa.\"",
+      "q_andrea": "\"Ogni lavoro necessita di accurati test, ma se dopo puoi aggiungerci un testarolo… è tutta un'altra cosa.\"",
+      "q_ermes": "\"Altro che smart working, qui si fa lo smile working! Senza troppo stress dopo una giornata di lavoro.\"",
+      "q_letizia": "\"Ho scelto Start Working perché cercavo un posto tranquillo per allontanarmi dal caos di Roma e stare più a contatto con la natura.\"",
       "img_alt": "Persone della comunità riunite insieme"
     },
     "ch4": {
@@ -49,19 +53,21 @@
       "p1": "Immagina di lavorare sotto soffitti affrescati, in una sala che ha visto passare secoli di storia. Il coworking di Start Working si trova nel palazzo comunale di Pontremoli, un edificio del Quattrocento messo a disposizione gratuitamente dal Comune.",
       "p2": "Otto postazioni dedicate, otto condivise, una cabina telefonica per le call, fibra ottica veloce. Aperto dal lunedì al sabato in orario d'ufficio. Ma il coworking è molto più di una scrivania: è il luogo dove si condivide la quotidianità. Una pausa caffè diventa una chiacchierata, un pranzo diventa un'amicizia.",
       "p3": "E tutto questo è gratuito. Nessun abbonamento, nessun costo nascosto. Il Comune gestisce lo spazio perché crede che portare lavoratori remoti significhi portare vita al borgo.",
+      "phone_pre": "Per informazioni sul coworking:",
       "img_alt": "Spazio coworking in palazzo storico"
     },
     "ch5": {
       "title": "Tutto a portata di piedi",
-      "p1": "Una delle paure più comuni: \"Ma in un borgo di montagna c'è tutto quello che serve?\" La risposta è sì. A un chilometro c'è un ospedale con pronto soccorso, chirurgia e pista per l'elisoccorso. Ci sono scuole di ogni ordine e grado, negozi, banche, farmacia, cinema e teatro.",
+      "p1": "Una delle paure più comuni: \"Ma in un borgo di montagna c'è tutto quello che serve?\" La risposta è sì. A un chilometro c'è un ospedale con pronto soccorso, chirurgia e pista per l'elisoccorso. Ci sono scuole di ogni ordine e grado, negozi, banche, farmacia, palestra, cinema e teatro.",
       "p2": "Pontremoli è collegata al mondo: l'autostrada A15 è a pochi minuti, la linea ferroviaria La Spezia-Parma passa di qui, e gli aeroporti di Pisa (90 km), Genova (110 km) e Firenze (150 km) sono facilmente raggiungibili. Muoversi è più semplice di quanto pensi.",
       "p3": "La comunità ti aiuta anche a trovare casa — dagli annunci alle presentazioni con i proprietari. E se hai bambini, sappi che c'è supporto per asili nido e babysitting, perché qui la genitorialità non è una sfida solitaria.",
+      "p4": "Qui sotto, un assaggio della nostra rete associativa.",
       "img_alt": "Via del centro storico di un borgo italiano"
     },
     "ch6": {
       "title": "Natura e avventura",
       "p1": "Chiudi il laptop e in cinque minuti sei nel bosco. Mountain bike attraverso borghi medievali, trekking fluviale nei canyon degli Stretti di Giaredo, escursioni lungo il Magra con l'acqua che scorre verde smeraldo tra le rocce. Le creste dell'Appennino regalano viste che arrivano fino alle Alpi Apuane.",
-      "p2": "Per chi preferisce ritmi più dolci, ci sono palestre, corsi di yoga, e le antiche vie di pellegrinaggio — la Via del Volto Santo e la Via Francigena — che attraversano il territorio. Ogni stagione ha il suo carattere: l'autunno odora di castagne, l'inverno copre le cime di neve, la primavera esplode di verde e l'estate invita ai fiumi.",
+      "p2": "Per chi preferisce ritmi più dolci, ci sono palestre, centri olistici, e le antiche vie di pellegrinaggio — la Via del Volto Santo e la Via Francigena — che attraversano il territorio. Ogni stagione ha il suo carattere: l'autunno odora di castagne, l'inverno copre le cime di neve, la primavera esplode di verde e l'estate invita ai fiumi.",
       "img1_alt": "Canyon fluviale con acqua cristallina",
       "img2_alt": "Sentiero di montagna nell'Appennino"
     },
@@ -78,18 +84,22 @@
       "p2": "Organizzeremo una visita esplorativa: qualche giorno per scoprire Pontremoli, il coworking, la comunità e il territorio. Camminerai per le vie del centro, pranzerai con chi vive qui, vedrai lo spazio dove potresti lavorare ogni giorno.",
       "p3": "Se decidi di trasferirti, la comunità ti aiuta: dalla ricerca della casa alle pratiche burocratiche, dalle presentazioni con i vicini alla prima spesa. Non sarai mai solo in questo passaggio.",
       "p4": "Qualche risposta rapida: Start Working è aperta a tutte le età e a tutte le professioni. Non è un servizio di collocamento — devi avere già un tuo lavoro. Il coworking è gratuito e gestito dal Comune. Non ci sono quote associative obbligatorie. L'unica cosa che chiediamo è la voglia di far parte di qualcosa.",
-      "docs_pre": "Vuoi saperne di più su chi siamo e come funzioniamo? Leggi il nostro",
+      "docs_pre": "Vuoi conoscere missione e valori? Leggi il nostro",
       "statuto_link": "Statuto",
       "whatsapp_title": "Il cuore del progetto è la Community WhatsApp",
-      "whatsapp_intro": "La community WhatsApp è il posto giusto da cui partire. È aperta, informale, e il modo più diretto per conoscerci e interagire con chi già vive qui. Dentro troverai la Bacheca con tutti gli aggiornamenti e gli eventi, il gruppo Nuovi Arrivi dove puoi fare qualsiasi domanda senza impegno, e tanti altri gruppi tematici da esplorare. Non devi presentarti subito: entra, guardati intorno, e quando ti senti pronto fai il primo passo. Ti aspettiamo.",
+      "whatsapp_intro_1": "È il posto giusto da cui partire e il modo più diretto per conoscerci e interagire con chi già vive qui. Dentro troverai la",
+      "whatsapp_bacheca": "Bacheca",
+      "whatsapp_intro_2": "con tutti gli aggiornamenti e il nostro calendario eventi, il gruppo",
+      "whatsapp_nuovi": "Nuovi Arrivi",
+      "whatsapp_intro_3": "dove puoi fare qualsiasi domanda senza impegno, e tanti altri gruppi tematici da esplorare. Non devi presentarti subito: entra, guardati intorno, e quando ti senti pronto fai il primo passo. Se preferisci, puoi anche scrivere in privato a un admin: siamo qui per aiutarti. Ti aspettiamo a braccia aperte!",
       "whatsapp_cta": "Entra nella Community WhatsApp",
-      "form_title": "Preferisci partire con un'email?",
+      "form_title": "Preferisci iniziare con un'email?",
       "form_intro_pre": "Scrivici direttamente a",
       "form_intro_post": "oppure usa il modulo qui sotto.",
       "form_email_placeholder": "La tua email",
-      "form_message_placeholder": "Raccontaci chi sei, cosa fai e cosa cerchi. Se vuoi, lascia anche il tuo nome e numero di telefono.",
-      "form_submit": "Invia messaggio",
-      "social_intro": "Oppure seguici e scrivici sui social.",
+      "form_message_placeholder": "Raccontaci chi sei, cosa fai e cosa cerchi. Se vuoi, lascia anche il tuo numero di telefono.",
+      "form_submit": "📨 Invia",
+      "social_intro": "Puoi anche seguirci e scriverci sui social.",
       "cta": "Scrivici e inizia il viaggio",
       "img_alt": "Benvenuto a Pontremoli"
     }
@@ -111,15 +121,20 @@
     "social_desc": "Instagram, LinkedIn, Facebook — resta connesso con la comunità."
   },
   "footer": {
-    "links_heading": "🔗 Link Utili",
-    "social_heading": "📱 Social Media",
+    "links_heading": "Link Utili",
+    "social_heading": "Social",
     "statuto": "📜 Statuto",
     "socio": "🤝 Diventa Socio",
     "donazioni": "💚 Donazioni",
     "privacy": "🔒 Privacy Policy",
-    "cookie": "🍪 Cookie Policy"
+    "cookie": "🍪 Cookie Policy",
+    "registration": "Iscritta al RUNTS n. 18559 del 29/08/2023",
+    "tax_id_label": "Codice Fiscale"
   },
   "press": {
-    "title": "Parlano di Noi"
+    "title": "Clicca sulla nostra rassegna stampa: 👇"
   }
 }
+
+
+

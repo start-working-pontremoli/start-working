@@ -6,7 +6,7 @@
   <title data-i18n="meta.title">Start Working Pontremoli</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="Comunità di smart working in Lunigiana, Toscana. Coworking gratuito, fibra veloce, natura e comunità.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#2D2A26">
+  <meta name="theme-color" content="#1E1E1E">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Open Graph -->
@@ -27,26 +27,26 @@
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#8B5E3C', dark: '#6B4226', light: '#A67B5B' },
-            accent: { DEFAULT: '#C4873A', hover: '#A8712E' },
-            warm: '#FFF8F0',
-            contact: '#F0E6D8',
-            border: '#E8DDD0',
-            body: '#2D2A26',
-            'body-light': '#5C5650',
-            'body-muted': '#8A8279',
-            bg: '#FAF7F2',
-            footer: '#2D2A26',
+            primary: { DEFAULT: '#E8600A', dark: '#C94E00', light: '#F28A3C' },
+            accent: { DEFAULT: '#F59E0B', hover: '#D97706' },
+            warm: '#FFFBF0',
+            contact: '#FFF0DB',
+            border: '#F0E0C8',
+            body: '#1E1E1E',
+            'body-light': '#4A4A4A',
+            'body-muted': '#7A7A7A',
+            bg: '#FEFCF8',
+            footer: '#1E1E1E',
           },
           fontFamily: {
             heading: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
             body: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
           },
           boxShadow: {
-            sm: '0 1px 4px rgba(45,42,38,0.06)',
-            md: '0 4px 16px rgba(45,42,38,0.08)',
-            lg: '0 8px 32px rgba(45,42,38,0.12)',
-            hover: '0 8px 24px rgba(45,42,38,0.14)',
+            sm: '0 1px 4px rgba(30,30,30,0.06)',
+            md: '0 4px 16px rgba(30,30,30,0.08)',
+            lg: '0 8px 32px rgba(30,30,30,0.12)',
+            hover: '0 8px 24px rgba(30,30,30,0.14)',
           },
         },
       },
@@ -84,21 +84,21 @@
       -webkit-backdrop-filter: blur(8px);
     }
     .header--transparent .logo-text { color: #fff; }
-    .header--solid .logo-text { color: #6B4226; }
+    .header--solid .logo-text { color: #C94E00; }
 
     .header--transparent .nav-link { color: rgba(255,255,255,0.85); }
     .header--transparent .nav-link:hover,
     .header--transparent .nav-link.active { color: #fff; background: rgba(255,255,255,0.12); }
     .header--solid .nav-link { color: #5C5650; }
     .header--solid .nav-link:hover,
-    .header--solid .nav-link.active { color: #8B5E3C; background: rgba(139,94,60,0.07); }
+    .header--solid .nav-link.active { color: #E8600A; background: rgba(232,96,10,0.07); }
 
     .header--transparent .lang-toggle { background: rgba(255,255,255,0.12); }
-    .header--solid .lang-toggle { background: rgba(139,94,60,0.06); }
+    .header--solid .lang-toggle { background: rgba(232,96,10,0.06); }
     .header--transparent .lang-toggle__btn { color: rgba(255,255,255,0.5); }
     .header--transparent .lang-toggle__btn.active { color: #fff; background: rgba(255,255,255,0.18); }
     .header--solid .lang-toggle__btn { color: #8A8279; }
-    .header--solid .lang-toggle__btn.active { color: #8B5E3C; background: rgba(139,94,60,0.12); }
+    .header--solid .lang-toggle__btn.active { color: #E8600A; background: rgba(232,96,10,0.12); }
 
     .header--transparent .hamburger-line { background: #fff; }
     .header--solid .hamburger-line { background: #2D2A26; }
@@ -106,6 +106,7 @@
     /* === Mobile Menu State === */
     .mobile-menu { opacity: 0; visibility: hidden; transition: opacity 400ms cubic-bezier(0.4,0,0.2,1), visibility 400ms cubic-bezier(0.4,0,0.2,1); }
     .mobile-menu.open { opacity: 1; visibility: visible; }
+    .mobile-menu .lang-toggle__btn.active { color: #E8600A; background: rgba(232,96,10,0.12); }
 
     /* === Image Cycling === */
     .img-clickable { position: relative; cursor: pointer; }
@@ -117,10 +118,10 @@
     }
     .img-dot {
       width: 7px; height: 7px; border-radius: 50%;
-      background: #E8DDD0; border: none; padding: 0;
+      background: #F0E0C8; border: none; padding: 0;
       cursor: pointer; transition: background 200ms ease, transform 200ms ease;
     }
-    .img-dot.active { background: #8B5E3C; transform: scale(1.3); }
+    .img-dot.active { background: #E8600A; transform: scale(1.3); }
 
     /* === Keyframes === */
     @keyframes hero-bounce {
@@ -138,12 +139,18 @@
       mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
       -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     }
-    .press-track { animation: press-scroll 25s linear infinite; }
-    .press-track:hover { animation-play-state: paused; }
-
+    .press-track {
+      animation: press-scroll 50s linear infinite;
+      will-change: transform;
+    }
     /* === Focus Visible === */
     :focus:not(:focus-visible) { outline: none; }
-    :focus-visible { outline: 3px solid #C4873A; outline-offset: 3px; }
+    :focus-visible { outline: 3px solid #F59E0B; outline-offset: 3px; }
+
+    /* === Mobile: left-align paragraph text === */
+    @media (max-width: 767px) {
+      main section p { text-align: left; }
+    }
 
     /* === Reduced Motion === */
     @media (prefers-reduced-motion: reduce) {
@@ -181,8 +188,8 @@
 
       <div class="flex items-center gap-3">
         <div class="lang-toggle flex rounded-md overflow-hidden max-md:hidden" role="group" aria-label="Lingua">
-          <button class="lang-toggle__btn py-1.5 px-3 text-[13px] font-semibold transition-all duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] active" data-lang="it" aria-pressed="true">🇮🇹 IT</button>
-          <button class="lang-toggle__btn py-1.5 px-3 text-[13px] font-semibold transition-all duration-150 ease-[cubic-bezier(0.4,0,0.2,1)]" data-lang="en" aria-pressed="false">🇬🇧 EN</button>
+          <button class="lang-toggle__btn inline-flex items-center gap-1.5 py-1.5 px-3 text-[13px] font-semibold transition-all duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] active" data-lang="it" aria-pressed="true">🇮🇹 IT</button>
+          <button class="lang-toggle__btn inline-flex items-center gap-1.5 py-1.5 px-3 text-[13px] font-semibold transition-all duration-150 ease-[cubic-bezier(0.4,0,0.2,1)]" data-lang="en" aria-pressed="false">🇺🇸 EN</button>
         </div>
         <button class="hidden max-md:flex flex-col justify-center gap-[5px] w-10 h-10 p-2" id="hamburger-btn" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
           <span class="hamburger-line block w-full h-0.5 rounded-sm transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
@@ -196,21 +203,33 @@
   <!-- ============ MOBILE MENU ============ -->
   <div class="mobile-menu fixed inset-0 z-[200] bg-bg flex items-center justify-center" id="mobile-menu" role="dialog" aria-label="Menu di navigazione" aria-hidden="true">
     <div class="text-center">
-      <button class="absolute top-4 right-5 text-4xl text-body w-12 h-12 flex items-center justify-center rounded-lg transition-colors duration-150 hover:bg-black/5" id="menu-close" aria-label="Chiudi menu">&times;</button>
-      <nav class="mobile-menu__nav flex flex-col gap-5 mb-8" aria-label="Menu mobile">
-        <a href="#chi-siamo" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary" data-i18n="nav.story">La storia</a>
-        <a href="#community" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary" data-i18n="nav.community">Comunità</a>
-        <a href="#coworking" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary" data-i18n="nav.coworking">Coworking</a>
-        <a href="#unisciti" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary" data-i18n="nav.contact">Contatti</a>
-      </nav>
-      <div class="lang-toggle flex justify-center rounded-md overflow-hidden bg-primary/[0.06] mb-6" role="group" aria-label="Lingua">
-        <button class="lang-toggle__btn py-2 px-[18px] text-[15px] font-semibold text-body-muted transition-all duration-150 active" data-lang="it" aria-pressed="true">🇮🇹 IT</button>
-        <button class="lang-toggle__btn py-2 px-[18px] text-[15px] font-semibold text-body-muted transition-all duration-150" data-lang="en" aria-pressed="false">🇬🇧 EN</button>
+      <button class="absolute top-4 right-5 text-4xl text-body w-12 h-12 flex items-center justify-center rounded-md transition-colors duration-150 hover:bg-black/5" id="menu-close" aria-label="Chiudi menu">&times;</button>
+      <div class="lang-toggle inline-flex justify-center rounded-full overflow-hidden bg-primary/[0.06] mb-14" role="group" aria-label="Lingua">
+        <button class="lang-toggle__btn inline-flex items-center gap-1.5 py-2 px-4 text-[15px] font-semibold text-body-muted rounded-full transition-all duration-150 active" data-lang="it" aria-pressed="true">🇮🇹 IT</button>
+        <button class="lang-toggle__btn inline-flex items-center gap-1.5 py-2 px-4 text-[15px] font-semibold text-body-muted rounded-full transition-all duration-150" data-lang="en" aria-pressed="false">🇺🇸 EN</button>
       </div>
-      <div class="flex justify-center gap-6">
-        <a href="#" class="text-sm text-body-muted transition-colors duration-150 hover:text-primary" aria-label="Instagram">Instagram</a>
-        <a href="#" class="text-sm text-body-muted transition-colors duration-150 hover:text-primary" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" class="text-sm text-body-muted transition-colors duration-150 hover:text-primary" aria-label="Facebook">Facebook</a>
+      <nav class="mobile-menu__nav flex flex-col gap-5 mb-14" aria-label="Menu mobile">
+        <a href="#chi-siamo" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary">🏛️ <span data-i18n="nav.story">Associazione</span></a>
+        <a href="#community" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary">🤝 <span data-i18n="nav.community">Comunità</span></a>
+        <a href="#coworking" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary">💻 <span data-i18n="nav.coworking">Coworking</span></a>
+        <a href="#unisciti" class="mobile-menu__link font-heading text-[28px] font-normal text-body transition-colors duration-150 hover:text-primary">✉️ <span data-i18n="nav.contact">Contatti</span></a>
+      </nav>
+      <div class="flex justify-center gap-4">
+        <a href="https://chat.whatsapp.com/DPOwvz65VJG882iXbLIzqQ?mode=gi_t" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10" aria-label="WhatsApp">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/start_working_pontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0069"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+        </a>
+        <a href="https://www.facebook.com/smartworkingpontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#0866FF"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/start-working-pontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@StartWorkingPontremoliAPS" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10" aria-label="YouTube">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
       </div>
     </div>
   </div>
@@ -220,14 +239,14 @@
 
     <!-- HERO -->
     <section class="relative flex items-center justify-center text-center overflow-hidden" id="hero">
-      <div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Paesaggio della Lunigiana" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80')"></div>
+      <div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Paesaggio della Lunigiana" style="background-image: url('img/hero-cover-dark.webp')"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-body/30 via-body/50 to-body/[0.65]"></div>
       <div class="relative z-[1] max-w-[860px] px-6 text-white">
-        <h1 class="font-heading text-[clamp(36px,6vw,64px)] font-bold leading-[1.15] mb-5 bg-gradient-to-r from-white via-[#F0C27A] to-[#E8A87C] bg-clip-text text-transparent [text-shadow:none]" data-i18n="hero.title">Lavora da un posto che puoi chiamare casa.</h1>
+        <h1 class="font-heading text-[clamp(36px,6vw,64px)] font-bold leading-[1.15] mb-5 bg-gradient-to-r from-white via-[#FFD166] to-[#E8600A] bg-clip-text text-transparent [text-shadow:none]" data-i18n="hero.title">Lavora da un posto che puoi chiamare casa.</h1>
         <p class="text-[clamp(16px,2.2vw,20px)] leading-relaxed opacity-90 mb-9" data-i18n="hero.subtitle">Una comunità diffusa di lavoratori remoti nel cuore della Toscana selvaggia.</p>
         <div class="flex gap-5 justify-center flex-wrap">
-          <a href="#chi-siamo" class="group inline-flex items-center justify-center gap-2.5 py-4 px-10 rounded-full text-[15px] font-semibold tracking-wide whitespace-nowrap bg-gradient-to-r from-[#C4873A] to-[#D4975A] text-white shadow-[0_4px_20px_rgba(196,135,58,0.4)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-[0_8px_32px_rgba(196,135,58,0.55)] hover:-translate-y-1 hover:brightness-110 focus-visible:outline-3 focus-visible:outline-white/50 focus-visible:outline-offset-[3px]" data-i18n="hero.cta_discover">La nostra storia</a>
-          <a href="#unisciti" class="group inline-flex items-center justify-center gap-2.5 py-4 px-10 rounded-full text-[15px] font-semibold tracking-wide whitespace-nowrap bg-white/[0.08] text-white border border-white/25 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-white/[0.18] hover:border-white/40 hover:shadow-[0_8px_32px_rgba(0,0,0,0.25)] hover:-translate-y-1 focus-visible:outline-3 focus-visible:outline-white/50 focus-visible:outline-offset-[3px]" data-i18n="hero.cta_contact">Fai il primo passo</a>
+          <a href="#video" class="group inline-flex items-center justify-center gap-2.5 py-4 px-10 w-[230px] rounded-xl text-[16px] font-bold tracking-wide whitespace-nowrap bg-white text-primary-dark shadow-[0_4px_24px_rgba(0,0,0,0.2)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-white/90 hover:shadow-[0_8px_36px_rgba(0,0,0,0.3)] focus-visible:outline-3 focus-visible:outline-white/50 focus-visible:outline-offset-[3px]">🎬 <span data-i18n="hero.cta_discover">Scopri di più</span></a>
+          <a href="#unisciti" class="group inline-flex items-center justify-center gap-2.5 py-4 px-10 w-[230px] rounded-xl text-[16px] font-bold tracking-wide whitespace-nowrap bg-gradient-to-r from-[#F59E0B] to-[#E8600A] text-white shadow-[0_4px_24px_rgba(245,158,11,0.45)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:brightness-110 hover:shadow-[0_8px_36px_rgba(245,158,11,0.6)] focus-visible:outline-3 focus-visible:outline-white/50 focus-visible:outline-offset-[3px]">🚀 <span data-i18n="hero.cta_contact">Unisciti a noi</span></a>
         </div>
       </div>
       <div class="hero-scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 z-[1] text-white/50" style="animation: hero-bounce 2.5s ease-in-out infinite" aria-hidden="true">
@@ -242,24 +261,70 @@
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4">
         <h2 class="font-heading text-[clamp(28px,5vw,42px)] font-bold text-primary-dark text-center mb-4" data-i18n="video.title">Un video vale mille immagini</h2>
         <p class="text-lg leading-[1.75] text-body-light text-center mb-10 max-w-[600px] mx-auto" data-i18n="video.subtitle">Guardaci in azione. Poi decidi tu.</p>
-        <!-- Main video -->
-        <div class="rounded-2xl overflow-hidden shadow-lg mb-8">
+        <!-- Main video (language-aware) -->
+        <div class="rounded-xl overflow-hidden shadow-lg mb-8">
           <div class="relative w-full" style="padding-bottom:56.25%">
-            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Start Working Pontremoli" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe id="main-video" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/m2ccpKOeN5U" data-video-it="m2ccpKOeN5U" data-video-en="bQA2njUeW8c" title="Start Working Pontremoli" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
         <!-- Secondary videos -->
         <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
-          <div class="rounded-2xl overflow-hidden shadow-lg">
+          <div class="rounded-xl overflow-hidden shadow-lg">
             <div class="relative w-full" style="padding-bottom:56.25%">
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/Jod20svrjVc" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg">
+          <div class="rounded-xl overflow-hidden shadow-lg">
             <div class="relative w-full" style="padding-bottom:56.25%">
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/nY3mSj30Xr8" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESS -->
+    <section class="py-14 overflow-hidden bg-white" id="press">
+      <div class="max-w-[1200px] mx-auto px-6 max-md:px-4">
+        <p class="text-lg leading-[1.75] text-body-light text-center mb-8" data-i18n="press.title">Clicca sulla nostra rassegna stampa: 👇</p>
+      </div>
+      <div class="press-track-wrapper mt-4">
+        <div class="press-track flex w-max">
+          <a href="https://www.ilsole24ore.com/art/smart-working-toscana-hospitality-si-reinventa-affitti-scontati-banda-ultralarga-e-servizi-on-demand-ADCL90y" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Il Sole 24 Ore</a>
+          <a href="https://www.corriere.it/buone-notizie/20_novembre_10/i-giovani-pontremoli-start-working-lunigiana-salvare-nostro-borgo-f65d5c50-229a-11eb-bd01-ee72f0d01280.shtml" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Corriere della Sera</a>
+          <a href="https://www.wsj.com/articles/are-you-a-digital-nomad-european-locales-want-remote-workers-11660620267" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Wall Street Journal</a>
+          <a href="https://www.lanazione.it/massa-carrara/cronaca/se-il-lavoro-e-piu-agile-sessanta-smartworkers-formano-associazione-di-promozione-sociale-d5dc28fe" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">La Nazione</a>
+          <a href="https://www.ilfattoquotidiano.it/2023/04/11/la-sfida-della-toscana-rilanciare-in-chiave-smart-economia-dei-territori-e-stili-di-vita/7120957/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Il Fatto Quotidiano</a>
+          <a href="https://www.italiachecambia.org/2023/02/start-working-pontremoli/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Italia che Cambia</a>
+          <a href="https://www.facebook.com/1078011744/videos/442414567012628/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Mediaset</a>
+          <a href="https://adeccogroup.it/morning-future/it/2023/06/07/smartworking-aree-interne-ripopolamento/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Adecco Group</a>
+          <a href="https://www.iltirreno.it/massa/cronaca/2020/10/27/news/e-anche-pontremoli-si-candida-come-posto-ideale-per-chi-lavora-in-smart-working-1.39467927" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Il Tirreno</a>
+          <a href="https://start-working.it/wp-content/uploads/2021/01/avvenire_05.11.2020.pdf" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Avvenire</a>
+          <a href="https://www.cittadellaspezia.com/2023/11/09/la-lunigiana-come-luogo-in-cui-vivere-e-lavorare-da-remoto-ecco-il-progetto-start-working-da-pontremoli-485300/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Città della Spezia</a>
+          <a href="https://www.voceapuana.com/attualita/2023/11/11/start-working-pontremoli-il-progetto-di-rendere-la-citta-il-polo-del-lavoro-da-casa/72170/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Voce Apuana</a>
+          <a href="https://www.intoscana.it/it/pontremoli-toscana-smart-working-lavoratori-ospiti-per-un-giorno/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">In Toscana</a>
+          <a href="https://ecodellalunigiana.it/start-working-pontremoli-aps/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Eco della Lunigiana</a>
+          <a href="https://www.liguria24.it/2023/11/09/la-lunigiana-come-luogo-in-cui-vivere-e-lavorare-da-remoto-ecco-il-progetto-start-working-da-pontremoli/384511/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Liguria24</a>
+          <a href="https://www.ilcorriereapuano.it/2020/11/iniziativa-cogliere-le-opportunita-dello-smart-working-lunigiana/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Il Corriere Apuano</a>
+          <a href="https://drive.google.com/file/d/1OdaiwFjqxDUKsliJzE4PjqHoYwty3qBY/view" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]">Dove</a>
+          <!-- Duplicated for seamless loop -->
+          <a href="https://www.ilsole24ore.com/art/smart-working-toscana-hospitality-si-reinventa-affitti-scontati-banda-ultralarga-e-servizi-on-demand-ADCL90y" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Il Sole 24 Ore</a>
+          <a href="https://www.corriere.it/buone-notizie/20_novembre_10/i-giovani-pontremoli-start-working-lunigiana-salvare-nostro-borgo-f65d5c50-229a-11eb-bd01-ee72f0d01280.shtml" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Corriere della Sera</a>
+          <a href="https://www.wsj.com/articles/are-you-a-digital-nomad-european-locales-want-remote-workers-11660620267" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Wall Street Journal</a>
+          <a href="https://www.lanazione.it/massa-carrara/cronaca/se-il-lavoro-e-piu-agile-sessanta-smartworkers-formano-associazione-di-promozione-sociale-d5dc28fe" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">La Nazione</a>
+          <a href="https://www.ilfattoquotidiano.it/2023/04/11/la-sfida-della-toscana-rilanciare-in-chiave-smart-economia-dei-territori-e-stili-di-vita/7120957/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Il Fatto Quotidiano</a>
+          <a href="https://www.italiachecambia.org/2023/02/start-working-pontremoli/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Italia che Cambia</a>
+          <a href="https://www.facebook.com/1078011744/videos/442414567012628/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Mediaset</a>
+          <a href="https://adeccogroup.it/morning-future/it/2023/06/07/smartworking-aree-interne-ripopolamento/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Adecco Group</a>
+          <a href="https://www.iltirreno.it/massa/cronaca/2020/10/27/news/e-anche-pontremoli-si-candida-come-posto-ideale-per-chi-lavora-in-smart-working-1.39467927" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Il Tirreno</a>
+          <a href="https://start-working.it/wp-content/uploads/2021/01/avvenire_05.11.2020.pdf" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Avvenire</a>
+          <a href="https://www.cittadellaspezia.com/2023/11/09/la-lunigiana-come-luogo-in-cui-vivere-e-lavorare-da-remoto-ecco-il-progetto-start-working-da-pontremoli-485300/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Città della Spezia</a>
+          <a href="https://www.voceapuana.com/attualita/2023/11/11/start-working-pontremoli-il-progetto-di-rendere-la-citta-il-polo-del-lavoro-da-casa/72170/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Voce Apuana</a>
+          <a href="https://www.intoscana.it/it/pontremoli-toscana-smart-working-lavoratori-ospiti-per-un-giorno/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">In Toscana</a>
+          <a href="https://ecodellalunigiana.it/start-working-pontremoli-aps/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Eco della Lunigiana</a>
+          <a href="https://www.liguria24.it/2023/11/09/la-lunigiana-come-luogo-in-cui-vivere-e-lavorare-da-remoto-ecco-il-progetto-start-working-da-pontremoli/384511/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Liguria24</a>
+          <a href="https://www.ilcorriereapuano.it/2020/11/iniziativa-cogliere-le-opportunita-dello-smart-working-lunigiana/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Il Corriere Apuano</a>
+          <a href="https://drive.google.com/file/d/1OdaiwFjqxDUKsliJzE4PjqHoYwty3qBY/view" target="_blank" rel="noopener noreferrer" class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true" tabindex="-1">Dove</a>
         </div>
       </div>
     </section>
@@ -272,11 +337,12 @@
         <h2 class="font-heading text-[clamp(28px,5vw,42px)] font-bold text-primary-dark text-center mb-10" data-i18n="story.ch1.title">Come tutto è iniziato</h2>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch1.p1">Ottobre 2020. Due pontremolesi si guardano intorno e vedono un paese che si svuota. Le case chiudono, i giovani partono, le botteghe abbassano le saracinesche. Ma vedono anche qualcosa che il resto del mondo sta cercando disperatamente: spazio, silenzio, bellezza, una vita a misura d'uomo.</p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch1.p2">L'intuizione è semplice e rivoluzionaria: non serviva portare le persone al lavoro. Serviva portare il lavoro alle persone. Nasce così Start Working, un progetto per attrarre lavoratori remoti da tutta Italia e dal mondo intero in un borgo dell'Appennino toscano.</p>
-        <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch1.p3">Da allora sono passati oltre quattro anni. Più di 150 persone si sono trasferite qui, da ogni regione italiana e da decine di paesi diversi. Nel 2023 Start Working è diventata un'associazione di promozione sociale (APS), riconosciuta e sostenuta dal Comune di Pontremoli. Non è un'azienda. Non è una startup. È una comunità che ha deciso di riscrivere le regole.</p>
+        <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch1.p3">Da allora sono passati oltre quattro anni. Più di 150 persone si sono trasferite qui, da ogni regione italiana e da decine di paesi diversi. Nel 2023 Start Working è diventata un'associazione di promozione sociale (APS), riconosciuta e sostenuta dal Comune di Pontremoli. Non è un'azienda. Non è una startup. È una comunità che ha deciso di riscrivere le regole.</p>
+        <p class="text-lg leading-[1.75] text-body-light mb-8"><span data-i18n="story.ch8.docs_pre">Vuoi conoscere missione e valori? Leggi il nostro</span> <a href="https://drive.google.com/uc?export=pdf&id=1aaNcKbauKXfmewC3YZ2V8QB8vjJAq_ql" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold underline underline-offset-2 hover:text-primary-dark transition-colors duration-150" data-i18n="story.ch8.statuto_link">Statuto</a>.</p>
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1534237886190-ced735ca4b73?w=1200&q=80" alt="Panoramica di Pontremoli e la Lunigiana" data-i18n-attr="alt:story.ch1.img_alt" loading="lazy">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="img/origin-story-1024.webp" alt="Panoramica di Pontremoli e la Lunigiana" data-i18n-attr="alt:story.ch1.img_alt" loading="lazy">
         </div>
       </div>
     </section>
@@ -290,8 +356,8 @@
         <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch2.p3">Pontremoli, il borgo più a nord della Toscana, è il cuore di tutto. Un paese di torri e ponti medievali, attraversato dal fiume Magra, con un centro storico che racconta mille anni di storia a ogni angolo.</p>
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80" alt="Paesaggio montano della Lunigiana" data-i18n-attr="alt:story.ch2.img1_alt" loading="lazy">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="img/lunigiana-landscape-01-1024.webp" alt="Paesaggio montano della Lunigiana" data-i18n-attr="alt:story.ch2.img1_alt" loading="lazy">
         </div>
       </div>
     </section>
@@ -301,24 +367,19 @@
       <div class="max-w-[680px] mx-auto px-6 max-md:px-4">
         <h2 class="font-heading text-[clamp(28px,5vw,42px)] font-bold text-primary-dark text-center mb-10" data-i18n="story.ch3.title">Una comunità che ti aspetta</h2>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch3.p1">Più di 150 persone, dai 25 ai 60 anni, hanno scelto Pontremoli come casa. Non sono turisti. Sono professionisti, creativi, famiglie che hanno deciso di vivere diversamente. E la cosa straordinaria è che questa comunità ti aspetta davvero.</p>
-        <blockquote class="border-l-4 border-accent pl-6 my-8">
-          <p class="text-lg leading-[1.75] text-body italic mb-2" data-i18n="story.ch3.q_paola">"Sono qui da tre anni e la mia vita si è trasformata. Non tornerei indietro per niente al mondo."</p>
-          <cite class="text-sm text-body-muted not-italic font-semibold">— Paola</cite>
-        </blockquote>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Paola</span> <span class="italic" data-i18n="story.ch3.q_paola">"3 anni fa portavo a Pontremoli le mie gatte e la mia vita. Il mio modo di vivere è cambiato per sempre."</span></p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch3.p2">Le connessioni qui non sono superficiali. Non è networking: è condivisione vera. Si pranza insieme, si esplorano i sentieri il sabato, si organizzano cene e serate di conversazione. Ogni mese c'è lo Start Talking, un appuntamento dove vecchi e nuovi residenti si incontrano e scambiano storie.</p>
-        <blockquote class="border-l-4 border-accent pl-6 my-8">
-          <p class="text-lg leading-[1.75] text-body italic mb-2" data-i18n="story.ch3.q_pierpaolo">"Le connessioni qui sono autentiche. Non è il solito networking: è la vita vera."</p>
-          <cite class="text-sm text-body-muted not-italic font-semibold">— Pierpaolo</cite>
-        </blockquote>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Pierpaolo</span> <span class="italic" data-i18n="story.ch3.q_pierpaolo">"Per me, Start Working non è stata solo un'opportunità, ma una vera rivelazione."</span></p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch3.p3">Michelle viene dal Canada e ha trovato qui un ritmo che non sapeva di cercare. Alberto lavora dalla sua scrivania con vista sulle montagne da dodici anni. Andrea giura che i testaroli migliorano la qualità del suo codice. Ermes dice che qui non è smart working, è smile working. E Letizia? Non ha nemmeno bisogno della macchina.</p>
-        <blockquote class="border-l-4 border-accent pl-6 my-8">
-          <p class="text-lg leading-[1.75] text-body italic mb-2" data-i18n="story.ch3.q_ermes">"Qui non è smart working. È smile working."</p>
-          <cite class="text-sm text-body-muted not-italic font-semibold">— Ermes</cite>
-        </blockquote>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Michelle</span> <span class="italic" data-i18n="story.ch3.q_michelle">"Si fonda su valori comuni ai miei: il ritmo a passo lento, la condivisione e la comunità."</span></p>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Alberto</span> <span class="italic" data-i18n="story.ch3.q_alberto">"Scegliete un posto in base alla vista che si ha dalle sue finestre: se quello che vedete vi fa venire voglia di uscire di casa."</span></p>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Andrea</span> <span class="italic" data-i18n="story.ch3.q_andrea">"Ogni lavoro necessita di accurati test, ma se dopo puoi aggiungerci un testarolo… è tutta un'altra cosa."</span></p>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Ermes</span> <span class="italic" data-i18n="story.ch3.q_ermes">"Altro che smart working, qui si fa lo smile working! Senza troppo stress dopo una giornata di lavoro."</span></p>
+        <p class="my-8 text-lg leading-[1.75] text-body-light"><span class="font-semibold text-primary-dark">Letizia</span> <span class="italic" data-i18n="story.ch3.q_letizia">"Ho scelto Start Working perché cercavo un posto tranquillo per allontanarmi dal caos di Roma e stare più a contatto con la natura."</span></p>
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80" alt="Persone della comunità riunite insieme" data-i18n-attr="alt:story.ch3.img_alt" loading="lazy">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="img/community-gathering-01.webp" alt="Persone della comunità riunite insieme" data-i18n-attr="alt:story.ch3.img_alt" loading="lazy">
         </div>
       </div>
     </section>
@@ -329,11 +390,12 @@
         <h2 class="font-heading text-[clamp(28px,5vw,42px)] font-bold text-primary-dark text-center mb-10" data-i18n="story.ch4.title">Il tuo ufficio in un palazzo del '400</h2>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch4.p1">Immagina di lavorare sotto soffitti affrescati, in una sala che ha visto passare secoli di storia. Il coworking di Start Working si trova nel palazzo comunale di Pontremoli, un edificio del Quattrocento messo a disposizione gratuitamente dal Comune.</p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch4.p2">Otto postazioni dedicate, otto condivise, una cabina telefonica per le call, fibra ottica veloce. Aperto dal lunedì al sabato in orario d'ufficio. Ma il coworking è molto più di una scrivania: è il luogo dove si condivide la quotidianità. Una pausa caffè diventa una chiacchierata, un pranzo diventa un'amicizia.</p>
-        <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch4.p3">E tutto questo è gratuito. Nessun abbonamento, nessun costo nascosto. Il Comune gestisce lo spazio perché crede che portare lavoratori remoti significhi portare vita al borgo.</p>
+        <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch4.p3">E tutto questo è gratuito. Nessun abbonamento, nessun costo nascosto. Il Comune gestisce lo spazio perché crede che portare lavoratori remoti significhi portare vita al borgo.</p>
+
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Spazio coworking in palazzo storico" data-i18n-attr="alt:story.ch4.img_alt" loading="lazy">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="img/coworking-interior-main-1024.webp" alt="Spazio coworking in palazzo storico" data-i18n-attr="alt:story.ch4.img_alt" loading="lazy">
         </div>
       </div>
     </section>
@@ -344,11 +406,12 @@
         <h2 class="font-heading text-[clamp(28px,5vw,42px)] font-bold text-primary-dark text-center mb-10" data-i18n="story.ch5.title">Tutto a portata di piedi</h2>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch5.p1">Una delle paure più comuni: "Ma in un borgo di montagna c'è tutto quello che serve?" La risposta è sì. A un chilometro c'è un ospedale con pronto soccorso, chirurgia e pista per l'elisoccorso. Ci sono scuole di ogni ordine e grado, negozi, banche, farmacia, cinema e teatro.</p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch5.p2">Pontremoli è collegata al mondo: l'autostrada A15 è a pochi minuti, la linea ferroviaria La Spezia-Parma passa di qui, e gli aeroporti di Pisa (90 km), Genova (110 km) e Firenze (150 km) sono facilmente raggiungibili. Muoversi è più semplice di quanto pensi.</p>
-        <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch5.p3">La comunità ti aiuta anche a trovare casa — dagli annunci alle presentazioni con i proprietari. E se hai bambini, sappi che c'è supporto per asili nido e babysitting, perché qui la genitorialità non è una sfida solitaria.</p>
+        <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch5.p3">La comunità ti aiuta anche a trovare casa — dagli annunci alle presentazioni con i proprietari. E se hai bambini, sappi che c'è supporto per asili nido e babysitting, perché qui la genitorialità non è una sfida solitaria.</p>
+        <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch5.p4">Qui sotto, un assaggio della nostra rete associativa.</p>
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.5!2d9.8787!3d44.3756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4f2e8e8e8e8e8%3A0x0!2sVia+Piagnaro+5%2C+54027+Pontremoli+MS!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" class="w-full h-[480px] max-md:h-[320px]" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Start Working Pontremoli - Via Piagnaro 5"></iframe>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1auGkPXmmqjZJTj_Cy6_vQcrltK8lrbo&amp;ehbc=2E312F&amp;noprof=1" class="w-full h-[480px] max-md:h-[320px]" style="border:0" allowfullscreen="" loading="lazy" title="Pontremoli - Cosa puoi trovare"></iframe>
         </div>
       </div>
     </section>
@@ -361,8 +424,8 @@
         <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch6.p2">Per chi preferisce ritmi più dolci, ci sono palestre, corsi di yoga, e le antiche vie di pellegrinaggio — la Via del Volto Santo e la Via Francigena — che attraversano il territorio. Ogni stagione ha il suo carattere: l'autunno odora di castagne, l'inverno copre le cime di neve, la primavera esplode di verde e l'estate invita ai fiumi.</p>
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80" alt="Canyon fluviale con acqua cristallina" data-i18n-attr="alt:story.ch6.img1_alt" loading="lazy">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="img/sport-natura-01.webp" alt="Canyon fluviale con acqua cristallina" data-i18n-attr="alt:story.ch6.img1_alt" loading="lazy">
         </div>
       </div>
     </section>
@@ -376,8 +439,8 @@
         <p class="text-lg leading-[1.75] text-body-light mb-8" data-i18n="story.ch7.p3">La vita culturale non si ferma ai festival. Ci sono la banda musicale comunale, il gruppo teatrale, circoli fotografici, scout, rievocazioni storiche, la Protezione Civile, e il festival digitale Futuro (da) Remoto. E ogni mese, lo Start Talking riunisce la comunità per una serata di scambio e scoperta.</p>
       </div>
       <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-10">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80" alt="Festival e celebrazioni di paese" data-i18n-attr="alt:story.ch7.img_alt" loading="lazy">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="img/community-event-01.webp" alt="Festival e celebrazioni di paese" data-i18n-attr="alt:story.ch7.img_alt" loading="lazy">
         </div>
       </div>
     </section>
@@ -390,18 +453,17 @@
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch8.p2">Organizzeremo una visita esplorativa: qualche giorno per scoprire Pontremoli, il coworking, la comunità e il territorio. Camminerai per le vie del centro, pranzerai con chi vive qui, vedrai lo spazio dove potresti lavorare ogni giorno.</p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch8.p3">Se decidi di trasferirti, la comunità ti aiuta: dalla ricerca della casa alle pratiche burocratiche, dalle presentazioni con i vicini alla prima spesa. Non sarai mai solo in questo passaggio.</p>
         <p class="text-lg leading-[1.75] text-body-light mb-5" data-i18n="story.ch8.p4">Qualche risposta rapida: Start Working è aperta a tutte le età e a tutte le professioni. Non è un servizio di collocamento — devi avere già un tuo lavoro. Il coworking è gratuito e gestito dal Comune. Non ci sono quote associative obbligatorie. L'unica cosa che chiediamo è la voglia di far parte di qualcosa.</p>
-        <p class="text-lg leading-[1.75] text-body-light mb-5"><span data-i18n="story.ch8.docs_pre">Vuoi saperne di più su chi siamo e come funzioniamo? Leggi il nostro</span> <a href="#" class="text-primary font-semibold underline underline-offset-2 hover:text-primary-dark transition-colors duration-150" data-i18n="story.ch8.statuto_link">Statuto</a>.</p>
       </div>
 
       <!-- WhatsApp Community CTA -->
       <div class="max-w-[680px] mx-auto px-6 max-md:px-4 mt-12">
-        <div class="bg-warm rounded-2xl p-10 max-md:p-7 shadow-md">
+        <div class="bg-warm rounded-xl p-10 max-md:p-7 shadow-md">
           <h3 class="font-heading text-[clamp(22px,3.5vw,30px)] font-bold text-primary-dark text-center mb-6" data-i18n="story.ch8.whatsapp_title">Il cuore del progetto è la Community WhatsApp</h3>
-          <p class="text-[15px] leading-[1.75] text-body-light mb-8" data-i18n="story.ch8.whatsapp_intro">La community WhatsApp è il posto giusto da cui partire. È aperta, informale, e il modo più diretto per conoscerci e interagire con chi già vive qui. Dentro troverai la Bacheca con tutti gli aggiornamenti e gli eventi, il gruppo Nuovi Arrivi dove puoi fare qualsiasi domanda senza impegno, e tanti altri gruppi tematici da esplorare. Non devi presentarti subito: entra, guardati intorno, e quando ti senti pronto fai il primo passo. Ti aspettiamo.</p>
+          <p class="text-[15px] leading-[1.75] text-body-light mb-8"><span data-i18n="story.ch8.whatsapp_intro_1">È il posto giusto da cui partire e il modo più diretto per conoscerci e interagire con chi già vive qui. Dentro troverai la</span> <em data-i18n="story.ch8.whatsapp_bacheca">Bacheca</em> <span data-i18n="story.ch8.whatsapp_intro_2">con tutti gli aggiornamenti e il nostro calendario eventi, il gruppo</span> <em data-i18n="story.ch8.whatsapp_nuovi">Nuovi Arrivi</em> <span data-i18n="story.ch8.whatsapp_intro_3">dove puoi fare qualsiasi domanda senza impegno, e tanti altri gruppi tematici da esplorare. Non devi presentarti subito: entra, guardati intorno, e quando ti senti pronto fai il primo passo. Se preferisci, puoi anche scrivere in privato a un admin: siamo qui per aiutarti. Ti aspettiamo a braccia aperte!</span></p>
           <div class="text-center">
-            <a href="https://chat.whatsapp.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 py-4 px-8 max-md:px-6 rounded-lg text-lg max-md:text-base font-semibold text-center bg-[#25D366] text-white transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-[#1DA851] hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-3 focus-visible:outline-[#25D366] focus-visible:outline-offset-[3px]">
+            <a href="https://chat.whatsapp.com/DPOwvz65VJG882iXbLIzqQ?mode=gi_t" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 py-4 px-8 max-md:px-6 rounded-md text-lg max-md:text-base font-semibold text-center bg-[#25D366] text-white transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-[#1DA851] focus-visible:outline-3 focus-visible:outline-[#25D366] focus-visible:outline-offset-[3px]">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span data-i18n="story.ch8.whatsapp_cta">Entra nella Community WhatsApp</span>
+              <span class="hidden md:inline" data-i18n="story.ch8.whatsapp_cta">Entra nella Community WhatsApp</span><span class="md:hidden">Entra nella Community</span>
             </a>
           </div>
         </div>
@@ -413,13 +475,13 @@
         <p class="text-[15px] leading-[1.75] text-body-light text-center mb-8"><span data-i18n="story.ch8.form_intro_pre">Scrivici direttamente a</span> <a href="mailto:info@start-working.it" class="text-primary font-semibold underline underline-offset-2 hover:text-primary-dark transition-colors duration-150">info@start-working.it</a> <span data-i18n="story.ch8.form_intro_post">oppure usa il modulo qui sotto.</span></p>
         <form action="#" method="POST" class="space-y-5">
           <div>
-            <input type="email" id="contact-email" name="email" required class="w-full px-4 py-3 rounded-lg border border-border bg-white text-body text-base transition-colors duration-150 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20" data-i18n-attr="placeholder:story.ch8.form_email_placeholder" placeholder="La tua email">
+            <input type="email" id="contact-email" name="email" required class="w-full px-4 py-3 rounded-md border border-border bg-white text-body text-base transition-colors duration-150 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20" data-i18n-attr="placeholder:story.ch8.form_email_placeholder" placeholder="La tua email">
           </div>
           <div>
-            <textarea id="contact-message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg border border-border bg-white text-body text-base transition-colors duration-150 resize-y focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20" data-i18n-attr="placeholder:story.ch8.form_message_placeholder" placeholder="Raccontaci chi sei, cosa fai e cosa cerchi. Se vuoi, lascia anche il tuo nome e numero di telefono."></textarea>
+            <textarea id="contact-message" name="message" rows="6" required class="w-full px-4 py-3 rounded-md border border-border bg-white text-body text-base transition-colors duration-150 resize-y focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20" data-i18n-attr="placeholder:story.ch8.form_message_placeholder" placeholder="Raccontaci chi sei, cosa fai e cosa cerchi. Se vuoi, lascia anche il tuo nome e numero di telefono."></textarea>
           </div>
           <div class="text-center pt-2">
-            <button type="submit" class="inline-flex items-center justify-center gap-2 py-3.5 px-10 rounded-lg text-base font-semibold whitespace-nowrap border-2 border-accent bg-accent text-white transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-accent-hover hover:border-accent-hover hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" data-i18n="story.ch8.form_submit">Invia messaggio</button>
+            <button type="submit" class="inline-flex items-center justify-center gap-2 py-3.5 px-10 rounded-md text-base font-semibold whitespace-nowrap border-2 border-accent bg-accent text-white transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-accent-hover hover:border-accent-hover cursor-pointer focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" data-i18n="story.ch8.form_submit">Invia messaggio</button>
           </div>
         </form>
       </div>
@@ -428,54 +490,24 @@
       <div class="max-w-[680px] mx-auto px-6 max-md:px-4 mt-12 text-center">
         <p class="text-[15px] leading-[1.75] text-body-muted mb-5" data-i18n="story.ch8.social_intro">Oppure seguici e scrivici sui social.</p>
         <div class="flex gap-4 justify-center">
-          <a href="https://chat.whatsapp.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-primary hover:text-white hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://chat.whatsapp.com/DPOwvz65VJG882iXbLIzqQ?mode=gi_t" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="WhatsApp">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
-          <a href="#" class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-primary hover:text-white hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <a href="https://www.instagram.com/start_working_pontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="Instagram">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#FF0069"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
           </a>
-          <a href="#" class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-primary hover:text-white hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://www.linkedin.com/company/start-working-pontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="LinkedIn">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <a href="#" class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-primary hover:text-white hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          <a href="https://www.facebook.com/smartworkingpontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="Facebook">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#0866FF"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@StartWorkingPontremoliAPS" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-[3px]" aria-label="YouTube">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
         </div>
       </div>
 
-      <div class="max-w-[960px] mx-auto px-6 max-md:px-4 mt-14">
-        <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img class="w-full h-[480px] max-md:h-[320px] object-cover" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Benvenuto a Pontremoli" data-i18n-attr="alt:story.ch8.img_alt" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- PRESS -->
-    <section class="py-14 overflow-hidden" id="press">
-      <div class="max-w-[1200px] mx-auto px-6 max-md:px-4">
-        <h2 class="text-center font-body text-[13px] font-bold uppercase tracking-[2.5px] text-body-muted mb-8" data-i18n="press.title">Parlano di Noi</h2>
-      </div>
-      <div class="press-track-wrapper">
-        <div class="press-track flex w-max">
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">Il Sole 24 Ore</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">Corriere della Sera</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">Wall Street Journal</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">ANSA</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">La Repubblica</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">Sky TG24</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">Wired Italia</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]">Forbes</span>
-          <!-- Duplicated for seamless loop -->
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">Il Sole 24 Ore</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">Corriere della Sera</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">Wall Street Journal</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">ANSA</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">La Repubblica</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">Sky TG24</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">Wired Italia</span>
-          <span class="shrink-0 px-10 font-serif text-lg font-bold text-body-muted opacity-35 transition-opacity duration-[250ms] cursor-pointer whitespace-nowrap select-none hover:opacity-[0.85]" aria-hidden="true">Forbes</span>
-        </div>
-      </div>
     </section>
 
   </main>
@@ -486,36 +518,38 @@
     <div class="max-w-[1200px] mx-auto px-6 max-md:px-4 py-12 max-md:py-10 grid grid-cols-3 max-md:grid-cols-1 gap-10 max-md:gap-8 text-center">
       <!-- Col 1: Brand -->
       <div>
-        <div class="text-lg font-semibold text-white mb-3">🏡 Start Working</div>
+        <p class="text-xs text-white/35 mb-3">Start Working Pontremoli APS<br><span data-i18n="footer.registration">Iscritta al RUNTS n. 18559 del 29/08/2023</span><br><span data-i18n="footer.tax_id_label">Codice Fiscale</span> 90020300456</p>
         <a href="https://maps.google.com/?q=Via+Piagnaro+5,+54027+Pontremoli+MS" target="_blank" rel="noopener noreferrer" class="block text-sm leading-[1.7] text-white/55 transition-colors duration-150 hover:text-white">📍 Via Piagnaro 5, 54027 Pontremoli (MS)</a>
-        <a href="mailto:info@start-working.it" class="inline-block mt-2 text-sm text-white/55 transition-colors duration-150 hover:text-white">✉️ info@start-working.it</a>
+        <a href="mailto:info@start-working.it" class="block mt-1.5 text-sm text-white/55 transition-colors duration-150 hover:text-white">📨 info@start-working.it</a>
+        <a href="mailto:startworkingpontremoli@pec.it" class="block mt-1.5 text-sm text-white/55 transition-colors duration-150 hover:text-white">🏛️ startworkingpontremoli@pec.it</a>
       </div>
       <!-- Col 2: Links -->
       <div>
-        <div class="text-lg font-semibold text-white mb-3" data-i18n="footer.links_heading">🔗 Link Utili</div>
         <div class="flex flex-col gap-2.5 text-sm items-center">
-          <a href="#" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.statuto">📜 Statuto</a>
-          <a href="#" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.socio">🤝 Diventa Socio</a>
-          <a href="#" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.donazioni">💚 Donazioni</a>
+          <a href="https://drive.google.com/uc?export=pdf&id=1aaNcKbauKXfmewC3YZ2V8QB8vjJAq_ql" target="_blank" rel="noopener noreferrer" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.statuto">📜 Statuto</a>
+          <a href="https://drive.google.com/uc?export=pdf&id=1fSZREqsEtHoXp2ufo0ZzKJFL2yvv_Tfo" target="_blank" rel="noopener noreferrer" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.socio">🤝 Diventa Socio</a>
+          <a href="https://www.paypal.me/StartWorkingAPS" target="_blank" rel="noopener noreferrer" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.donazioni">💚 Donazioni</a>
           <a href="#" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.privacy">🔒 Privacy Policy</a>
           <a href="#" class="text-white/55 transition-colors duration-150 hover:text-white" data-i18n="footer.cookie">🍪 Cookie Policy</a>
         </div>
       </div>
       <!-- Col 3: Social -->
       <div>
-        <div class="text-lg font-semibold text-white mb-3" data-i18n="footer.social_heading">📱 Social Media</div>
         <div class="flex gap-3 justify-center">
-          <a href="https://chat.whatsapp.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 rounded-full bg-white/[0.07] text-white/50 transition-all duration-150 hover:bg-white/15 hover:text-white" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://chat.whatsapp.com/DPOwvz65VJG882iXbLIzqQ?mode=gi_t" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 transition-all duration-150 cursor-pointer" aria-label="WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
-          <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full bg-white/[0.07] text-white/50 transition-all duration-150 hover:bg-white/15 hover:text-white" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <a href="https://www.instagram.com/start_working_pontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 transition-all duration-150 cursor-pointer" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0069"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
           </a>
-          <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full bg-white/[0.07] text-white/50 transition-all duration-150 hover:bg-white/15 hover:text-white" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          <a href="https://www.facebook.com/smartworkingpontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 transition-all duration-150 cursor-pointer" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#0866FF"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
           </a>
-          <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full bg-white/[0.07] text-white/50 transition-all duration-150 hover:bg-white/15 hover:text-white" aria-label="LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://www.linkedin.com/company/start-working-pontremoli" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 transition-all duration-150 cursor-pointer" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@StartWorkingPontremoliAPS" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 transition-all duration-150 cursor-pointer" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
         </div>
       </div>

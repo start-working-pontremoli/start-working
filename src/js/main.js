@@ -96,6 +96,15 @@
       btn.classList.toggle('active', isActive);
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
+
+    // Switch main video based on language
+    var mainVideo = document.getElementById('main-video');
+    if (mainVideo) {
+      var videoId = mainVideo.getAttribute('data-video-' + lang);
+      if (videoId) {
+        mainVideo.src = 'https://www.youtube.com/embed/' + videoId;
+      }
+    }
   }
 
   // Language button handlers
@@ -223,17 +232,56 @@
   });
 
   /* ===== IMAGE CLICK CYCLING ===== */
-  var placeholderImages = [
-    'https://images.unsplash.com/photo-1534237886190-ced735ca4b73?w=1200&q=80',
-    'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80',
-    'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=1200&q=80',
-    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80',
-    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
-    'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80',
-    'https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80',
-    'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80',
-    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80'
-  ];
+  var sectionImages = {
+    'chi-siamo': [
+      'img/origin-story-1024.webp',
+      'img/association-aps.webp',
+      'img/community-start-talking.webp'
+    ],
+    'lunigiana': [
+      'img/lunigiana-landscape-01-1024.webp',
+      'img/lunigiana-landscape-02-1024.webp',
+      'img/lunigiana-landscape-03-1024.webp',
+      'img/lunigiana-landscape-04-1024.webp'
+    ],
+    'community': [
+      'img/community-gathering-01.webp',
+      'img/community-gathering-02.webp',
+      'img/community-members-01.webp',
+      'img/community-members-02.webp',
+      'img/community-members-03.webp',
+      'img/community-members-04.webp',
+      'img/community-outdoor.webp',
+      'img/community-dinner.webp',
+      'img/community-start-talking-02.webp'
+    ],
+    'coworking': [
+      'img/coworking-interior-main-1024.webp',
+      'img/coworking-phonebooth.webp',
+      'img/coworking-workspace.webp',
+      'img/coworking-entrance.webp',
+      'img/coworking-desk-computer.webp'
+    ],
+    'natura': [
+      'img/sport-natura-01.webp',
+      'img/sport-natura-02.webp',
+      'img/sport-natura-03.webp',
+      'img/sport-natura-04.webp',
+      'img/sport-natura-05.webp',
+      'img/sport-natura-06.webp',
+      'img/sport-natura-07.webp',
+      'img/sport-natura-08.webp',
+      'img/sport-natura-09.webp',
+      'img/sport-natura-10.webp',
+      'img/sport-natura-hiking-1024.webp'
+    ],
+    'cultura': [
+      'img/community-event-01.webp',
+      'img/event-bancarelvino-1024.webp',
+      'img/event-messico-adolfo.webp',
+      'img/community-dinner.webp'
+    ]
+  };
 
   function setupImageCycling() {
     var storyImages = document.querySelectorAll('main section img[loading="lazy"]');
@@ -242,15 +290,13 @@
       if (!wrapper) return;
       wrapper.classList.add('img-clickable');
 
-      // Build image pool (2-4 images)
-      var count = 2 + Math.floor(Math.random() * 3);
-      var original = img.src;
-      var pool = [original];
-      var shuffled = placeholderImages
-        .filter(function (u) { return u !== original; })
-        .sort(function () { return 0.5 - Math.random(); });
-      for (var i = 0; i < count - 1 && i < shuffled.length; i++) {
-        pool.push(shuffled[i]);
+      // Find the section this image belongs to
+      var section = img.closest('section');
+      var sectionId = section ? section.id : '';
+      var pool = sectionImages[sectionId] || [img.src];
+      // Ensure current src is first if not already in pool
+      if (pool.indexOf(img.src) === -1) {
+        pool = [img.src].concat(pool);
       }
 
       // Create dot indicators
@@ -313,6 +359,22 @@
         });
       });
     });
+  }
+
+  /* ===== PRESS MARQUEE HOVER SLOW ===== */
+  var pressWrapper = document.querySelector('.press-track-wrapper');
+  if (pressWrapper) {
+    var pressTrack = pressWrapper.querySelector('.press-track');
+    if (pressTrack) {
+      pressWrapper.addEventListener('mouseenter', function () {
+        var anims = pressTrack.getAnimations();
+        anims.forEach(function (a) { a.playbackRate = 0.33; });
+      });
+      pressWrapper.addEventListener('mouseleave', function () {
+        var anims = pressTrack.getAnimations();
+        anims.forEach(function (a) { a.playbackRate = 1; });
+      });
+    }
   }
 
   /* ===== INIT ===== */

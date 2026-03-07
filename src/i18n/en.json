@@ -7,7 +7,7 @@
     "skip": "Skip to content"
   },
   "nav": {
-    "story": "Our story",
+    "story": "Association",
     "community": "Community",
     "coworking": "Coworking",
     "contact": "Contact"
@@ -15,15 +15,15 @@
   "hero": {
     "title": "Work from a place you can call home.",
     "subtitle": "A distributed community of remote workers in the heart of wild Tuscany.",
-    "cta_discover": "Our story",
-    "cta_contact": "Take the first step"
+    "cta_discover": "Discover more",
+    "cta_contact": "Join us"
   },
   "story": {
     "ch1": {
       "title": "How it all began",
       "p1": "October 2020. Two locals look around and see a town emptying out. Houses closing, young people leaving, shops shutting down. But they also see something the rest of the world is desperately searching for: space, silence, beauty, a life on a human scale.",
       "p2": "The insight was simple and revolutionary: you didn't need to bring people to the work. You needed to bring the work to the people. And so Start Working was born — a project to attract remote workers from all over Italy and the world to a village in the Tuscan Apennines.",
-      "p3": "More than four years have passed since then. Over 150 people have relocated here, from every Italian region and dozens of different countries. In 2023, Start Working became a registered social promotion association (APS), recognized and supported by the Municipality of Pontremoli. It's not a company. It's not a startup. It's a community that decided to rewrite the rules.",
+      "p3": "More than four years have passed since then. Over 150 people have relocated here, from every Italian region and dozens of different countries. On August 29, 2023, Start Working became a registered social promotion association (APS), recognized and supported by the Municipality of Pontremoli. It's not a company. It's not a startup. It's a community that decided to rewrite the rules.",
       "img_alt": "Panoramic view of Pontremoli and Lunigiana"
     },
     "ch2": {
@@ -37,11 +37,15 @@
     "ch3": {
       "title": "A community waiting for you",
       "p1": "Over 150 people, ages 25 to 60, have chosen Pontremoli as home. They're not tourists. They're professionals, creatives, families who decided to live differently. And the extraordinary thing is that this community is truly waiting for you.",
-      "q_paola": "\"I've been here three years and my life has been transformed. I wouldn't go back for anything in the world.\"",
+      "q_paola": "\"Three years ago I brought my cats and my life to Pontremoli. My way of living changed forever.\"",
       "p2": "The connections here aren't superficial. It's not networking: it's real sharing. People have lunch together, explore trails on Saturdays, organize dinners and conversation evenings. Every month there's Start Talking, a gathering where old and new residents meet and exchange stories.",
-      "q_pierpaolo": "\"The connections here are authentic. It's not the usual networking: it's real life.\"",
+      "q_pierpaolo": "\"For me, Start Working wasn't just an opportunity — it was a true revelation.\"",
       "p3": "Michelle came from Canada and found a rhythm she didn't know she was looking for. Alberto has been working from his desk with mountain views for twelve years. Andrea swears that testaroli improve his code quality. Ermes says it's not smart working here, it's smile working. And Letizia? She doesn't even need a car.",
-      "q_ermes": "\"This isn't smart working. It's smile working.\"",
+      "q_michelle": "\"It's built on values I share: a slow pace, sharing, and community.\"",
+      "q_alberto": "\"Choose a place based on the view from its windows: if what you see makes you want to go outside.\"",
+      "q_andrea": "\"Every job needs thorough testing, but if afterwards you can add a testarolo… that changes everything.\"",
+      "q_ermes": "\"Forget smart working — here it's smile working! No stress after a day's work.\"",
+      "q_letizia": "\"I chose Start Working because I was looking for a quiet place to escape Rome's chaos and be closer to nature.\"",
       "img_alt": "Community members gathered together"
     },
     "ch4": {
@@ -49,19 +53,21 @@
       "p1": "Imagine working under frescoed ceilings, in a hall that has witnessed centuries of history. Start Working's coworking space is located in Pontremoli's municipal palace, a 15th-century building provided free of charge by the municipality.",
       "p2": "Eight dedicated workstations, eight shared ones, a phone booth for calls, high-speed fiber optic. Open Monday to Saturday during office hours. But the coworking is much more than a desk: it's where daily life is shared. A coffee break becomes a conversation, a lunch becomes a friendship.",
       "p3": "And it's all free. No subscription, no hidden costs. The municipality manages the space because they believe that bringing remote workers means bringing life to the village.",
+      "phone_pre": "For coworking information:",
       "img_alt": "Coworking space in a historic palace"
     },
     "ch5": {
       "title": "Everything within walking distance",
-      "p1": "One of the most common fears: \"But does a mountain village have everything you need?\" The answer is yes. One kilometer away there's a hospital with an emergency room, surgery, and helipad. There are schools at every level, shops, banks, a pharmacy, cinema and theater.",
+      "p1": "One of the most common fears: \"But does a mountain village have everything you need?\" The answer is yes. One kilometer away there's a hospital with an emergency room, surgery, and helipad. There are schools at every level, shops, banks, a pharmacy, a gym, cinema and theater.",
       "p2": "Pontremoli is connected to the world: the A15 motorway is minutes away, the La Spezia-Parma railway passes through, and the airports of Pisa (90 km), Genoa (110 km) and Florence (150 km) are easily reachable. Getting around is simpler than you think.",
       "p3": "The community also helps you find housing — from listings to introductions with landlords. And if you have children, know that there's support for nurseries and babysitting, because here parenthood is not a solitary challenge.",
+      "p4": "Below, a taste of our local network.",
       "img_alt": "Street in an Italian historic town center"
     },
     "ch6": {
       "title": "Nature and adventure",
       "p1": "Close your laptop and in five minutes you're in the forest. Mountain biking through medieval villages, river trekking in the Stretti di Giaredo canyons, hiking along the Magra with emerald-green water flowing between rocks. The Apennine ridges offer views that stretch all the way to the Apuan Alps.",
-      "p2": "For those who prefer gentler rhythms, there are gyms, yoga classes, and ancient pilgrimage routes — the Via del Volto Santo and the Via Francigena — that cross the territory. Every season has its character: autumn smells of chestnuts, winter covers the peaks with snow, spring explodes with green and summer invites you to the rivers.",
+      "p2": "For those who prefer gentler rhythms, there are gyms, holistic centers, and ancient pilgrimage routes — the Via del Volto Santo and the Via Francigena — that cross the territory. Every season has its character: autumn smells of chestnuts, winter covers the peaks with snow, spring explodes with green and summer invites you to the rivers.",
       "img1_alt": "River canyon with crystal-clear water",
       "img2_alt": "Mountain trail in the Apennines"
     },
@@ -78,18 +84,22 @@
       "p2": "We'll organize an exploratory visit: a few days to discover Pontremoli, the coworking space, the community and the territory. You'll walk through the streets of the center, have lunch with the people who live here, see the space where you could work every day.",
       "p3": "If you decide to relocate, the community helps you: from finding a house to handling bureaucracy, from introductions with neighbors to your first grocery run. You'll never be alone in this transition.",
       "p4": "A few quick answers: Start Working is open to all ages and all professions. It's not an employment service — you need to already have your own job. The coworking is free and managed by the municipality. There are no mandatory membership fees. The only thing we ask is the desire to be part of something.",
-      "docs_pre": "Want to know more about who we are and how we work? Read our",
+      "docs_pre": "Want to know our mission and values? Read our",
       "statuto_link": "Statute",
       "whatsapp_title": "The heart of the project is the WhatsApp Community",
-      "whatsapp_intro": "The WhatsApp community is the right place to start. It's open, informal, and the most direct way to get to know us and interact with those who already live here. Inside you'll find the Announcements board with all updates and events, the New Arrivals group where you can ask anything with no strings attached, and many other themed groups to explore. You don't have to introduce yourself right away: join, look around, and when you're ready take the first step. We're waiting for you.",
+      "whatsapp_intro_1": "It's the right place to start and the most direct way to get to know us and interact with those who already live here. Inside you'll find the",
+      "whatsapp_bacheca": "Announcements",
+      "whatsapp_intro_2": "board with all updates and our events calendar, the",
+      "whatsapp_nuovi": "Nuovi Arrivi (New Arrivals)",
+      "whatsapp_intro_3": "group where you can ask anything with no strings attached, and many other themed groups to explore. You don't have to introduce yourself right away: join, look around, and when you're ready take the first step. If you prefer, you can also write privately to an admin: we're here to help. We're waiting for you.",
       "whatsapp_cta": "Join the WhatsApp Community",
       "form_title": "Prefer to start with an email?",
       "form_intro_pre": "Write to us directly at",
       "form_intro_post": "or use the form below.",
       "form_email_placeholder": "Your email",
-      "form_message_placeholder": "Tell us who you are, what you do and what you're looking for. If you'd like, include your name and phone number too.",
-      "form_submit": "Send message",
-      "social_intro": "Or follow us and reach out on social media.",
+      "form_message_placeholder": "Tell us who you are, what you do and what you're looking for. If you'd like, include your phone number too.",
+      "form_submit": "📨 Send",
+      "social_intro": "You can also follow us and reach out on social media.",
       "cta": "Write to us and start the journey",
       "img_alt": "Welcome to Pontremoli"
     }
@@ -111,15 +121,17 @@
     "social_desc": "Instagram, LinkedIn, Facebook — stay connected with the community."
   },
   "footer": {
-    "links_heading": "🔗 Useful Links",
-    "social_heading": "📱 Social Media",
+    "links_heading": "Useful Links",
+    "social_heading": "Social",
     "statuto": "📜 Statute",
     "socio": "🤝 Become a Member",
     "donazioni": "💚 Donations",
     "privacy": "🔒 Privacy Policy",
-    "cookie": "🍪 Cookie Policy"
+    "cookie": "🍪 Cookie Policy",
+    "registration": "Registered at RUNTS no. 18559, 29/08/2023",
+    "tax_id_label": "Tax ID"
   },
   "press": {
-    "title": "In the Press"
+    "title": "Click on our press coverage: 👇"
   }
 }
