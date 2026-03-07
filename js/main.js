@@ -128,6 +128,13 @@
   // Set initial state
   header.classList.add('header--transparent');
 
+  // Dark overlay on scroll while still in hero
+  window.addEventListener('scroll', function () {
+    if (header.classList.contains('header--transparent')) {
+      header.classList.toggle('header--scrolled', window.scrollY > 20);
+    }
+  }, { passive: true });
+
   /* ===== SCROLL SPY ===== */
   var currentActive = null;
 
