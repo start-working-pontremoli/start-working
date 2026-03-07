@@ -368,7 +368,7 @@
     if (pressTrack) {
       pressWrapper.addEventListener('mouseenter', function () {
         var anims = pressTrack.getAnimations();
-        anims.forEach(function (a) { a.playbackRate = 0.33; });
+        anims.forEach(function (a) { a.playbackRate = 0.1; });
       });
       pressWrapper.addEventListener('mouseleave', function () {
         var anims = pressTrack.getAnimations();

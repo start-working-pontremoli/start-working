@@ -20,7 +20,7 @@
   },
   "story": {
     "ch1": {
-      "title": "Come tutto è iniziato",
+      "title": "Come è iniziato il tutto",
       "p1": "Ottobre 2020. Due pontremolesi si guardano intorno e vedono un paese che si svuota. Le case chiudono, i giovani partono, le botteghe abbassano le saracinesche. Ma vedono anche qualcosa che il resto del mondo sta cercando disperatamente: spazio, silenzio, bellezza, una vita a misura d'uomo.",
       "p2": "L'intuizione è semplice e rivoluzionaria: non serviva portare le persone al lavoro. Serviva portare il lavoro alle persone. Nasce così Start Working, un progetto per attrarre lavoratori remoti da tutta Italia e dal mondo intero in un borgo dell'Appennino toscano.",
       "p3": "Da allora sono passati oltre quattro anni. Più di 150 persone si sono trasferite qui, da ogni regione italiana e da decine di paesi diversi. Il 29 agosto 2023 Start Working è diventata un'associazione di promozione sociale (APS), riconosciuta e sostenuta dal Comune di Pontremoli. Non è un'azienda. Non è una startup. È una comunità che ha deciso di riscrivere le regole.",
@@ -37,15 +37,15 @@
     "ch3": {
       "title": "Una comunità che ti aspetta",
       "p1": "Più di 150 persone, dai 25 ai 60 anni, hanno scelto Pontremoli come casa. Non sono turisti. Sono professionisti, creativi, famiglie che hanno deciso di vivere diversamente. E la cosa straordinaria è che questa comunità ti aspetta davvero.",
-      "q_paola": "\"3 anni fa portavo a Pontremoli le mie gatte e la mia vita. Il mio modo di vivere è cambiato per sempre.\"",
+      "q_paola": "«3 anni fa portavo a Pontremoli le mie gatte e la mia vita. Il mio modo di vivere è cambiato per sempre.»",
       "p2": "Le connessioni qui non sono superficiali. Non è networking: è condivisione vera. Si pranza insieme, si esplorano i sentieri il sabato, si organizzano cene e serate di conversazione. Ogni mese c'è lo Start Talking, un appuntamento dove vecchi e nuovi residenti si incontrano e scambiano storie.",
-      "q_pierpaolo": "\"Per me, Start Working non è stata solo un'opportunità, ma una vera rivelazione.\"",
+      "q_pierpaolo": "«Per me, Start Working non è stata solo un'opportunità, ma una vera rivelazione.»",
       "p3": "Michelle viene dal Canada e ha trovato qui un ritmo che non sapeva di cercare. Alberto lavora dalla sua scrivania con vista sulle montagne da dodici anni. Andrea giura che i testaroli migliorano la qualità del suo codice. Ermes dice che qui non è smart working, è smile working. E Letizia? Non ha nemmeno bisogno della macchina.",
-      "q_michelle": "\"Si fonda su valori comuni ai miei: il ritmo a passo lento, la condivisione e la comunità.\"",
-      "q_alberto": "\"Scegliete un posto in base alla vista che si ha dalle sue finestre: se quello che vedete vi fa venire voglia di uscire di casa.\"",
-      "q_andrea": "\"Ogni lavoro necessita di accurati test, ma se dopo puoi aggiungerci un testarolo… è tutta un'altra cosa.\"",
-      "q_ermes": "\"Altro che smart working, qui si fa lo smile working! Senza troppo stress dopo una giornata di lavoro.\"",
-      "q_letizia": "\"Ho scelto Start Working perché cercavo un posto tranquillo per allontanarmi dal caos di Roma e stare più a contatto con la natura.\"",
+      "q_michelle": "«Si fonda su valori comuni ai miei: il ritmo a passo lento, la condivisione e la comunità.»",
+      "q_alberto": "«Scegliete un posto in base alla vista che si ha dalle sue finestre: se quello che vedete vi fa venire voglia di uscire di casa.»",
+      "q_andrea": "«Ogni lavoro necessita di accurati test, ma se dopo puoi aggiungerci un testarolo… è tutta un'altra cosa.»",
+      "q_ermes": "«Altro che smart working, qui si fa lo smile working! Senza troppo stress dopo una giornata di lavoro.»",
+      "q_letizia": "«Ho scelto Start Working perché cercavo un posto tranquillo per allontanarmi dal caos di Roma e stare più a contatto con la natura.»",
       "img_alt": "Persone della comunità riunite insieme"
     },
     "ch4": {
@@ -132,7 +132,7 @@
     "tax_id_label": "Codice Fiscale"
   },
   "press": {
-    "title": "Clicca sulla nostra rassegna stampa: 👇"
+    "title": "Esplora la rassegna stampa:"
   }
 }
 

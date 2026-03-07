@@ -37,15 +37,15 @@
     "ch3": {
       "title": "A community waiting for you",
       "p1": "Over 150 people, ages 25 to 60, have chosen Pontremoli as home. They're not tourists. They're professionals, creatives, families who decided to live differently. And the extraordinary thing is that this community is truly waiting for you.",
-      "q_paola": "\"Three years ago I brought my cats and my life to Pontremoli. My way of living changed forever.\"",
+      "q_paola": "«Three years ago I brought my cats and my life to Pontremoli. My way of living changed forever.»",
       "p2": "The connections here aren't superficial. It's not networking: it's real sharing. People have lunch together, explore trails on Saturdays, organize dinners and conversation evenings. Every month there's Start Talking, a gathering where old and new residents meet and exchange stories.",
-      "q_pierpaolo": "\"For me, Start Working wasn't just an opportunity — it was a true revelation.\"",
+      "q_pierpaolo": "«For me, Start Working wasn't just an opportunity — it was a true revelation.»",
       "p3": "Michelle came from Canada and found a rhythm she didn't know she was looking for. Alberto has been working from his desk with mountain views for twelve years. Andrea swears that testaroli improve his code quality. Ermes says it's not smart working here, it's smile working. And Letizia? She doesn't even need a car.",
-      "q_michelle": "\"It's built on values I share: a slow pace, sharing, and community.\"",
-      "q_alberto": "\"Choose a place based on the view from its windows: if what you see makes you want to go outside.\"",
-      "q_andrea": "\"Every job needs thorough testing, but if afterwards you can add a testarolo… that changes everything.\"",
-      "q_ermes": "\"Forget smart working — here it's smile working! No stress after a day's work.\"",
-      "q_letizia": "\"I chose Start Working because I was looking for a quiet place to escape Rome's chaos and be closer to nature.\"",
+      "q_michelle": "«It's built on values I share: a slow pace, sharing, and community.»",
+      "q_alberto": "«Choose a place based on the view from its windows: if what you see makes you want to go outside.»",
+      "q_andrea": "«Every job needs thorough testing, but if afterwards you can add a testarolo… that changes everything.»",
+      "q_ermes": "«Forget smart working — here it's smile working! No stress after a day's work.»",
+      "q_letizia": "«I chose Start Working because I was looking for a quiet place to escape Rome's chaos and be closer to nature.»",
       "img_alt": "Community members gathered together"
     },
     "ch4": {
@@ -132,6 +132,6 @@
     "tax_id_label": "Tax ID"
   },
   "press": {
-    "title": "Click on our press coverage: 👇"
+    "title": "Explore our press coverage:"
   }
 }
