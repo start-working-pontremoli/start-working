@@ -222,8 +222,102 @@
     }
   });
 
+  /* ===== IMAGE CLICK CYCLING ===== */
+  var placeholderImages = [
+    'https://images.unsplash.com/photo-1534237886190-ced735ca4b73?w=1200&q=80',
+    'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80',
+    'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=1200&q=80',
+    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
+    'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80',
+    'https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80',
+    'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80',
+    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80'
+  ];
+
+  function setupImageCycling() {
+    var storyImages = document.querySelectorAll('main section img[loading="lazy"]');
+    storyImages.forEach(function (img) {
+      var wrapper = img.parentElement;
+      if (!wrapper) return;
+      wrapper.classList.add('img-clickable');
+
+      // Build image pool (2-4 images)
+      var count = 2 + Math.floor(Math.random() * 3);
+      var original = img.src;
+      var pool = [original];
+      var shuffled = placeholderImages
+        .filter(function (u) { return u !== original; })
+        .sort(function () { return 0.5 - Math.random(); });
+      for (var i = 0; i < count - 1 && i < shuffled.length; i++) {
+        pool.push(shuffled[i]);
+      }
+
+      // Create dot indicators
+      var dotsContainer = document.createElement('div');
+      dotsContainer.className = 'img-dots';
+      var dots = [];
+      pool.forEach(function (_, di) {
+        var dot = document.createElement('button');
+        dot.className = 'img-dot' + (di === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Image ' + (di + 1));
+        dots.push(dot);
+        dotsContainer.appendChild(dot);
+      });
+      wrapper.parentElement.appendChild(dotsContainer);
+
+      var idx = 0;
+      img.style.transition = 'opacity 200ms ease, transform 300ms ease';
+
+      function goTo(newIdx) {
+        if (newIdx === idx) return;
+        idx = newIdx;
+        img.style.opacity = '0';
+        setTimeout(function () {
+          img.src = pool[idx];
+          img.style.opacity = '1';
+        }, 200);
+        dots.forEach(function (d, di) {
+          d.classList.toggle('active', di === idx);
+        });
+      }
+
+      // Click image → next
+      img.addEventListener('click', function () {
+        goTo((idx + 1) % pool.length);
+      });
+
+      // Swipe left/right
+      var startX = 0;
+      var startY = 0;
+      wrapper.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      }, { passive: true });
+      wrapper.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - startX;
+        var dy = e.changedTouches[0].clientY - startY;
+        // Only horizontal swipes (ignore vertical scrolling)
+        if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return;
+        if (dx < 0) {
+          goTo((idx + 1) % pool.length);
+        } else {
+          goTo((idx - 1 + pool.length) % pool.length);
+        }
+      }, { passive: true });
+
+      // Click dot → go to that image
+      dots.forEach(function (dot, di) {
+        dot.addEventListener('click', function () {
+          goTo(di);
+        });
+      });
+    });
+  }
+
   /* ===== INIT ===== */
   // Load translations on page load
   setLanguage(currentLang);
+  setupImageCycling();
 
 })();
