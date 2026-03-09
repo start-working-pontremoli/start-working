@@ -123,11 +123,11 @@
   "footer": {
     "links_heading": "Link Utili",
     "social_heading": "Social",
-    "statuto": "📜 Statuto",
-    "socio": "🤝 Diventa Socio",
-    "donazioni": "💚 Donazioni",
-    "privacy": "🔒 Privacy Policy",
-    "cookie": "🍪 Cookie Policy",
+    "statuto": "Statuto",
+    "socio": "Diventa Socio",
+    "donazioni": "Donazioni",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
     "registration": "Iscritta al RUNTS n. 18559 del 29/08/2023",
     "tax_id_label": "Codice Fiscale"
   },
