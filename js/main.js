@@ -375,13 +375,112 @@
     if (pressTrack) {
       pressWrapper.addEventListener('mouseenter', function () {
         var anims = pressTrack.getAnimations();
-        anims.forEach(function (a) { a.playbackRate = 0.1; });
+        anims.forEach(function (a) { a.playbackRate = 0.02; });
       });
       pressWrapper.addEventListener('mouseleave', function () {
         var anims = pressTrack.getAnimations();
         anims.forEach(function (a) { a.playbackRate = 1; });
       });
     }
+  }
+
+  /* ===== CONTACT FORM (Web3Forms, inline submit) ===== */
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    var introEl = document.getElementById('contact-form-intro');
+    var successEl = document.getElementById('contact-form-success');
+    var errorEl = document.getElementById('contact-form-error');
+    var submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.classList.add('hidden');
+      var origLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '…';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          if (result.ok && result.data && result.data.success) {
+            contactForm.classList.add('hidden');
+            if (introEl) introEl.classList.add('hidden');
+            successEl.classList.remove('hidden');
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            throw new Error((result.data && result.data.message) || 'Submission failed');
+          }
+        })
+        .catch(function () {
+          errorEl.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.textContent = origLabel;
+        });
+    });
+  }
+
+  /* ===== LIGHTBOX ===== */
+  var lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    var lightboxImg = document.getElementById('lightbox-img');
+    var counter = document.getElementById('lightbox-counter');
+    var btnClose = document.getElementById('lightbox-close');
+    var btnPrev = document.getElementById('lightbox-prev');
+    var btnNext = document.getElementById('lightbox-next');
+    var images = Array.prototype.slice.call(document.querySelectorAll('img[data-lightbox]'));
+    var currentIndex = 0;
+
+    function show() {
+      var img = images[currentIndex];
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt || '';
+      counter.textContent = (currentIndex + 1) + ' / ' + images.length;
+    }
+    function open(idx) {
+      currentIndex = idx;
+      show();
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+    function next() { currentIndex = (currentIndex + 1) % images.length; show(); }
+    function prev() { currentIndex = (currentIndex - 1 + images.length) % images.length; show(); }
+
+    images.forEach(function (img, i) {
+      img.addEventListener('click', function () { open(i); });
+    });
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', function (e) { e.stopPropagation(); prev(); });
+    btnNext.addEventListener('click', function (e) { e.stopPropagation(); next(); });
+
+    // Click on left/right half of image navigates
+    lightboxImg.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var rect = lightboxImg.getBoundingClientRect();
+      if (e.clientX - rect.left < rect.width / 2) prev(); else next();
+    });
+
+    // Click on backdrop (outside image) closes
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) close();
+    });
+
+    // Keyboard nav
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') prev();
+      else if (e.key === 'ArrowRight') next();
+    });
   }
 
   /* ===== INIT ===== */
