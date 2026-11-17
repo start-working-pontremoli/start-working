@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80"><!-- The closed menu card: a shape for CSS masks (its holes are the drawing) -->
+<mask id="m"><rect width="60" height="80" rx="6" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<rect x="5" y="5" width="50" height="70" rx="3" stroke-width="1.2"/>
+<path d="M25 15v5a2.5 2.5 0 0 0 5 0v-5M27.5 15v13M35 15c-2.5 2.5-2.5 6.5 0 7.5v5.5"/>
+<path d="M12.5 47V35l3.5 6 3.5-6v12M27.8 35h-5.5v12h5.5M22.3 41h4.5M30.6 47V35l7 12V35M40.4 35v8.5a3.5 3.5 0 0 0 7 0V35"/>
+<path d="M22 57h16" stroke-width="1.6"/>
+</g></mask>
+<rect width="60" height="80" rx="6" fill="#fff" mask="url(#m)"/></svg>

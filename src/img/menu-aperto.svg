@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80"><!-- The open menu: two pages, a shape for CSS masks (its holes are the drawing) -->
+<mask id="m"><path d="M58 3C42 1 18 2 4 5v72c14-3 38-3 54-1zM62 3c16-2 40-1 54 2v72c-14-3-38-3-54-1z" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M17 21V13l2.5 4 2.5-4v8M28.5 13h-4v8h4M24.5 17h3M31 21v-8l5 8v-8M38.5 13v5.5a2.5 2.5 0 0 0 5 0V13"/>
+<path d="M12 32h34M12 41h28M12 50h34M12 59h24M72 17h34M72 26h28M72 35h34M72 44h22M72 53h34M72 62h28"/>
+</g></mask>
+<rect width="120" height="80" fill="#fff" mask="url(#m)"/></svg>
